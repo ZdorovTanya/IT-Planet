@@ -26,72 +26,8 @@ body{
 }
 
 //-------------------ШАПКА---------------------------
-.header {
-    // position: absolute;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2000;
-}
 
-.header_container {
-    // display: flex;
-    min-height: 80px;
-    align-items: center;
-    background-color: rgba(176, 195, 188, 1);
-    border-radius: 0px 0px 30px 30px;
-}
-
-.header_menu {
-    
-}
-.menu_list {
-    display: flex;
-}
-.menu_item {
-    margin: 30px auto;
-}
-
-.menu_item:not(:last-child):hover{
-    background: #FFF27D;
-    border-radius: 30px;
-    // УБОГО
-}
-
-.menu_item img{
-    height: 25px;
-    color: initial;
-}
-
-.menu_link {
-
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 26px;
-    
-    color: #000000;
-}
-
-.menu_item:last-child{
-    border: 1px solid black;
-    border-radius: 20px;
-}
-
-.menu_item:last-of-type a{
-    color: rgba(0, 0, 0, 0.4);
-    padding: 20px 60px 20px 0px;
-    // УБОГО - СДЕЛАТЬ ФЛЕКС?
-}
-
-.menu_item:last-of-type img{
-    padding-left: 10px;
-}
-
-#block2 {
-    scroll-margin-top: 150px;
-}
+// меню подключено отдельным css
 
 //------------------------------СОДЕРЖИМОЕ-------------------
 .content{
@@ -145,18 +81,24 @@ body{
     color: #396857;
 }
 
+#block2 {
+    scroll-margin-top: 120px;
+}
+
 //----------------------СОДЕРЖИМОЕ САЙТА: МИССИЯ И О ЧЕМ САЙТ
 
 
 .about-project_mission {
-    margin-top: 70px;
+    margin-top: 150px;
 }
 .about-project_mission-title {
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
 .about-project_lining {
     margin-top: 70px;
+    margin-bottom: 50px;
 }
 .about-project_lining-title {
     margin-bottom: 20px;
@@ -180,15 +122,33 @@ body{
     margin-bottom: 20px;
 }
 
-.block_title {
+.block_row{
+    display: flex;
     cursor: pointer;
+    border: 1px solid #396857;
+    border-radius: 30px;
+    padding-left: 15px;
+    margin-bottom: 20px;
 }
+
+.block_title {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+
 
 .block_text {
     display: none;
     padding: 10px 0px 0px 0px;
+    background-color: #EBF0EE;
+    border-radius: 30px;
+    padding: 20px;
 }
 
+.block_text p:not(:first-child) {
+    margin-top: 10px;
+}
 
 //------ЖЕНЩИНА, ОНА ЖЕ ПОДВАЛ ПРИБИТА К НИЗУ, ЧТОБЫ ТЕКСТ РАСШИРЯЛСЯ---------------------------
 

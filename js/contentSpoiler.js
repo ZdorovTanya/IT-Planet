@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.block_title').click(function(event){
+    $('.block_row').click(function(event){
         $(this).toggleClass('active').next().slideToggle(300);
     })
 });
