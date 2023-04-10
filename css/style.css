@@ -92,65 +92,6 @@ body {
   margin: 0px auto;
 }
 
-.header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2000;
-}
-
-.header_container {
-  min-height: 80px;
-  align-items: center;
-  background-color: rgb(176, 195, 188);
-  border-radius: 0px 0px 30px 30px;
-}
-
-.menu_list {
-  display: flex;
-}
-
-.menu_item {
-  margin: 30px auto;
-}
-
-.menu_item:not(:last-child):hover {
-  background: #FFF27D;
-  border-radius: 30px;
-}
-
-.menu_item img {
-  height: 25px;
-  color: initial;
-}
-
-.menu_link {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 26px;
-  color: #000000;
-}
-
-.menu_item:last-child {
-  border: 1px solid black;
-  border-radius: 20px;
-}
-
-.menu_item:last-of-type a {
-  color: rgba(0, 0, 0, 0.4);
-  padding: 20px 60px 20px 0px;
-}
-
-.menu_item:last-of-type img {
-  padding-left: 10px;
-}
-
-#block2 {
-  scroll-margin-top: 150px;
-}
-
 .content {
   flex: 1 1 auto;
   position: relative;
@@ -200,16 +141,22 @@ body {
   color: #396857;
 }
 
+#block2 {
+  scroll-margin-top: 120px;
+}
+
 .about-project_mission {
-  margin-top: 70px;
+  margin-top: 150px;
 }
 
 .about-project_mission-title {
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
 .about-project_lining {
   margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 .about-project_lining-title {
@@ -228,13 +175,30 @@ body {
   margin-bottom: 20px;
 }
 
-.block_title {
+.block_row {
+  display: flex;
   cursor: pointer;
+  border: 1px solid #396857;
+  border-radius: 30px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.block_title {
+  padding: 5px;
+  padding-left: 15px;
 }
 
 .block_text {
   display: none;
   padding: 10px 0px 0px 0px;
+  background-color: #EBF0EE;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.block_text p:not(:first-child) {
+  margin-top: 10px;
 }
 
 .women-footer {

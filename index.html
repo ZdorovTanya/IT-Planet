@@ -8,6 +8,9 @@
     <title>eat.NORMAL</title>
 
     <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/popup.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +18,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
-<body>
+<body> 
     <div class="wrapper">
         <!-- общая оболочка шапки меню -->
-        <header class="header">
+        <header id="header" class="header">
             <!-- ограничивающий контейнер -->
             <div class="header_container _container">
                <nav class="header_menu">
@@ -37,7 +40,7 @@
                         </li>
                         <li class="menu_item">
                             <img src="/images/avtorisation.svg" alt="">
-                            <a href="" class="menu_link">Авторизация</a>
+                            <a href="#popup" class="menu_link">Авторизация</a>
                         </li>
                         <li class="menu_item">
                             <img src="/images/linza.svg" alt="">
@@ -106,59 +109,107 @@
                         <!-- выпадающие разделы -->
                         <div class="block">
                             <div class="block_item">
-                                <div class="block_title _title">
-                                    Форум
+                                <div class="block_row">
+                                    <img src="/images/ArrowDown.svg" alt="">
+                                    <div class="block_title _title"> Форум</div>
                                 </div>
+                                
                                 <div class="block_text _text"> 
-                                    В разделе “Форум” Вы сможете познакомится с историями других пользователей по теме, которая интересует лично 
-                                    Вас с помощью гибкой системы фильтров. С помощью аккаунта, Вы сможете рассказывать на форуме о своем личном опыте, 
-                                    оставлять комментарии, получать  поддержку, не только
-                                    от других пользователей, но и от психологов, которые также могут принимать участие в проекте.
+                                    <p>В разделе “Форум” Вы сможете познакомится с историями других пользователей по теме, которая интересует лично 
+                                        Вас с помощью гибкой системы фильтров.
+                                    </p>  
+                                    <p>
+                                        С помощью аккаунта, Вы сможете рассказывать на форуме о своем личном опыте, 
+                                        оставлять комментарии, получать  поддержку, не только
+                                        от других пользователей, но и от психологов, которые также могут принимать участие в проекте.
+                                    </p>  
                                 </div>
                             </div>
                             <div class="block_item">
-                                <div class="block_title _title">
-                                    Тесты
-                                </div>
+                                    <div class="block_row">
+                                        <img src="/images/ArrowDown.svg" alt="">
+                                        <div class="block_title _title"> Тесты</div>
+                                    </div>
+
                                 <div class="block_text _text"> 
-                                    Во вкладке тестов, Вы сможете пройти проверку на интересующую Вас тему. 
-                                    Полученные Вами результаты тестирования не претендуют на звание точного медицинского диагноза, они созданы лишь для того, 
-                                    чтобы помочь Вам обратить внимание на возможную проблему и обратиться за поддержкой, если она понадобиться.
-                                    С использованием аккаунта, результаты тестов будут сохраняться в Вашем профиле и Вы сможете отслеживать прогресс лечения.
+                                    <p>
+                                        Во вкладке тестов, Вы сможете пройти проверку на интересующую Вас тему. 
+                                    </p>
+                                    <p>
+                                        Полученные Вами результаты тестирования не претендуют на звание точного медицинского диагноза, они созданы лишь для того, 
+                                        чтобы помочь Вам обратить внимание на возможную проблему и обратиться за поддержкой, если она понадобиться.
+                                    </p>
+                                    
+                                    <p>
+                                        С использованием аккаунта, результаты тестов будут сохраняться в Вашем профиле и Вы сможете отслеживать прогресс лечения.
+                                    </p>
+                                    
                                 </div>
                             </div>
                             <div class="block_item">
-                                <div class="block_title _title">
-                                    Консультация
-                                </div>
+                                    <div class="block_row">
+                                        <img src="/images/ArrowDown.svg" alt="">
+                                        <div class="block_title _title"> Консультации</div>
+                                    </div>
+
                                 <div class="block_text _text"> 
-                                    В случае если Вы решите обратиться к специалисту, раздел
-                                    консультаций окажет содействие в подборе психотерапевта или группы помощи. (нужно придумать еще что-то бесплатное)
-                                    Также Вы сможете оставить заявку на первую бесплатную консультацию и получить рекомедации.
+                                    <p>
+                                        В случае если Вы решите обратиться к специалисту, раздел
+                                        консультаций окажет содействие в подборе психотерапевта или группы помощи онлайн или офлайн. 
+                                    </p>
+
+                                    <p>
+                                        Также Вы сможете оставить заявку на первую бесплатную консультацию и получить рекомедации.
+                                    </p>
+                                    
                                 </div>
                             </div>
                             <div class="block_item">
-                                <div class="block_title _title">
-                                    Самопомощь
-                                </div>
+                                    <div class="block_row">
+                                        <img src="/images/ArrowDown.svg" alt="">
+                                        <div class="block_title _title"> Самопомощь</div>
+                                    </div>
+                    
                                 <div class="block_text _text"> 
-                                    Если Вы осознаете наличие проблемы, то Вы уже на половине пути 
-                                    к ее решению. “Самопомощь” хранит в себе необходимый материал, для начала борьбы с заболеванием. 
-                                    Тут Вы можете найти ссылки на полезные источники и авторитетных психологов, ознакомиться с симптомами болезни и их возможными причинами, прочитать полезные статьи по интересующей
-                                    Вас теме и просто отвлечься от РПП в сложные минуты.
+                                    <p>
+                                        Если Вы осознаете наличие проблемы, то Вы уже на половине пути 
+                                        к ее решению.
+                                    </p>
+
+                                    <p>
+                                        “Самопомощь” хранит в себе необходимый материал, для начала борьбы с заболеванием. 
+                                        Тут Вы можете найти ссылки на полезные источники и авторитетных психологов, ознакомиться с симптомами болезни и их возможными причинами, прочитать полезные статьи по интересующей
+                                    </p>
+                               
+                                    <p>
+                                        Вас теме и просто отвлечься от РПП в сложные минуты.
+                                    </p>
+                                    
                                 </div>
                             </div>
                             <div class="block_item">
-                                <div class="block_title _title">
-                                    Авторизация
-                                </div>
+                                    <div class="block_row">
+                                        <img src="/images/ArrowDown.svg" alt="">
+                                        <div class="block_title _title"> Авторизация</div>
+                                    </div>
+                            
                                 <div class="block_text _text"> 
-                                    Зарегистрировавшись на нашем сайте, Вы получите возможность делиться своими историями на форумах и оставлять комментарии под чужими постами, также в профиле будет доступно сохранение 
-                                    результатов тестов, для отслеживания протекания заболевания / отслеживания прогресса выздоровления, а также функция подписки на авторов и трекер самочувствия, в котором Вы можете отмечать 
-                                    свое самочувствие и оставлять заметки в формате дневника.
-                                    Помимо этого в профиле будет разработана тетрадь с заданиями, которые помогут справиться с болезнью.
-                                    Любые Ваши данные из анкеты Вы можете отобразить или скрыть в своем профиле, для других читателей. Регистрация не является 
-                                    обязательной и создана для удобства и создания комфортной среды для пользователей.
+                                    <p>
+                                        Зарегистрировавшись на нашем сайте, Вы получите возможность делиться своими историями на форумах и оставлять комментарии под чужими постами, также в профиле будет доступно сохранение 
+                                        результатов тестов, для отслеживания отслеживания прогресса, а также функция подписки на авторов и трекер самочувствия, в котором Вы можете отмечать 
+                                        свои ощущения и оставлять заметки в формате дневника.
+                                    </p>
+                                   
+                                    <p>
+                                        Помимо этого в профиле будет разработана тетрадь с заданиями, которые помогут справиться с болезнью.
+                                    </p>
+
+                                    <p>
+                                        Любые Ваши данные из анкеты Вы можете отобразить или скрыть в своем профиле, для других читателей. Регистрация не является 
+                                        обязательной и создана для удобства и создания комфортной среды для пользователей.
+                                    </p>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -172,6 +223,125 @@
             <!-- <div class="women-footer__image _ibg"> -->
             <img src="/images/women.svg" alt="women">
             <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- попап регистрации и входа -->
+    <div id="popup" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__contetnt">
+                <!-- <a href="#header" class="popup__close">x</a> -->
+                
+                <div class="popup__title">
+                    <a href="#" class="entrance">Вход</a>
+                    <a href="#popup_registration" class="registration">Регистрация</a>
+                </div>
+
+                <div class="popup__middle">
+                    <form method="post" action="">
+                        <div class="input__row">
+                            <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
+                            <input id="UserEmail" type="email" placeholder="Введите Email">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
+                            <input id="UserPassword" type="password" placeholder="Введите пароль">
+                        </div>
+
+                        <div class="checkbox__row">
+                            <label class="rememberMe">
+                                <input type="checkbox" id="save" name="saveMe"> 
+                                Запомнить меня
+                            </label>
+                            <a href="#" class="forgot">Забыли пароль?</a>
+                        </div>
+ 
+                    </form>
+                </div>
+
+                
+                <div class="popup__footer">
+                    <a href="#" class="exist">Войти</a>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="popup_registration" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__contetnt">
+                <!-- <a href="#header" class="popup__close">x</a> -->
+                
+                <div class="popup__title">
+                    <a href="#popup" class="entrance">Вход</a>
+                    <a href="#" class="registration">Регистрация</a>
+                </div>
+
+                <div class="popup__middle__2">
+                    <form method="post" action="">
+                        <div class="input__row">
+                            <label for="UserName"></label>
+                            <input id="UserName" type="text" placeholder="Введите Ваше имя/ник">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserAge"></label>
+                            <input id="UserAge" type="text" placeholder="Дата Вашего рождения">
+                        </div>
+<!-- колонки попробовать -->
+                        <div class="input__row">
+                            <label for="UserSex"></label>
+                                <input id="UserSex" type="text" placeholder="Укажите Ваш пол">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserTarget"></label>
+                                <input id="UserTarget" type="text" placeholder="Опишите Вашу цель">
+                        </div>
+                      
+
+                        <div class="input__row">
+                            <label for="UserProblem"></label>
+                            <input id="UserProblem" type="text" placeholder="Опишите Вашу проблему">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
+                            <input id="UserEmail" type="email" placeholder="Введите Email">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
+                            <input id="UserPassword" type="password" placeholder="Введите пароль">
+                        </div>
+
+                        <div class="input__row">
+                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
+                            <input id="UserPassword" type="password" placeholder="Подтвердите пароль">
+                        </div>
+ 
+                        <div class="text">
+                             * Любую информацию, которую вы посчитаете личной, Вы сможете скрыть.
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+                
+                <div class="popup__footer">
+                    <a href="#" class="exist">Войти</a>
+                </div>
+
+            </div>
+            
         </div>
     </div>
     
