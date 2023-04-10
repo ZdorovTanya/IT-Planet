@@ -1,42 +1,57 @@
 <?php
 
+require_once("app/models/accountAR.php");
+
 class Account_model{
-    static private $table = "accounts";
+    static private $account;
 
 
     //регистрация нового пользователя
-    //ничего не возвращает
+    //возвращает true в случае удачной регистрации
+    //ищет акк с такими же почтой и паролем, возвращает false если находит
     function registration(){
-        $pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root", "123");
-        
-        $stmt = $pdo->prepare("INSERT INTO `accounts` (`id`, `name`, `birth`, `sex`, `goal`, `problem`, `email`, `password`) VALUES (NULL, :name, :birth, :sex, :goal, :problem, :email, :password)");
-        
-        $stmt->bindParam(":name", $_POST["name"]);
-        $stmt->bindParam(":birth", $_POST["birth"]);
-        $stmt->bindParam(":sex", $_POST["sex"]);
-        $stmt->bindParam(":goal", $_POST["goal"]);
-        $stmt->bindParam(":problem", $_POST["problem"]);
-        $stmt->bindParam(":email", $_POST["email"]);
-        $stmt->bindParam(":password", $_POST["password"]);
 
-        $stmt->execute();
+        static::$account = new Account($_POST["name"], $_POST["birth"], $_POST["sex"], $_POST["goal"], $_POST["problem"], $_POST["email"], $_POST["password"]);
+        
+        if (is_null(static::$account->findByEmailPassword($_POST["email"], md5($_POST["password"])))){
+            static::$account->save();
+            return true;
+        }
+
+        return false;
 
     }
 
 
     //вход в существующий акк
-    //возвращает кол-во подходящих строк
+    //возвращает true в случае удачного входа
     function login(){
-        $pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root", "123");
 
-        $stmt = $pdo->prepare("SELECT `name` FROM `accounts` WHERE `email`=:email AND `password`=:password");
+        static::$account = new Account();
+        static::$account = static::$account->findByEmailPassword($_POST["email"], md5($_POST["password"]));
 
-        $stmt->bindParam(":email",  $_POST["email"]);
-        $stmt->bindParam(":password", $_POST["password"]);
+        if (is_null(static::$account))
+            return false;
 
-        $stmt->execute();
+        setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
+        // echo json_encode(static::$account);
 
-        return $stmt->rowCount();
+        return true;
 
+    }
+
+    //возвращает имя пользователя или null если такого нет
+    static function getAccountName(){
+        static::$account = new Account();
+        if (!isset($_COOKIE["accountId"])) return null;
+        return static::$account->findNameById($_COOKIE["accountId"]);
+    }
+
+    function getName(){
+        return static::$account->name;
+    }
+
+    function getId(){
+        return static::$account->id;
     }
 }

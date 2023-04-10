@@ -1,12 +1,13 @@
 <?php
 
 class Main_controller{
+    private $model;
 
 
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
 
-        include("app/views/index.html");
+        include("app/views/index.php");
 
     }
 
@@ -15,9 +16,11 @@ class Main_controller{
     function register(){
 
         require("app/models/account_model.php");
-        $model = new Account_model();
+        $this->model = new Account_model();
 
-        $model->registration();
+        if ($this->model->registration())
+            echo "registration done";
+        else echo "errors wit registration";
 
     }
 
@@ -29,9 +32,14 @@ class Main_controller{
         require("app/models/account_model.php");
         $model = new Account_model();
 
-        if ($model->login() == 1){
+        if ($model->login()){
+            // setcookie("accountId", $model->getId());
             echo "login";
         } else echo "error wit login";
 
+    }
+
+    function getName(){
+        $this->model->getAccountName();    
     }
 }
