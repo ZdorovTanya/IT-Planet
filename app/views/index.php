@@ -40,7 +40,13 @@
                         </li>
                         <li class="menu_item">
                             <img src="/images/avtorisation.svg" alt="">
-                            <a href="#popup" class="menu_link">Авторизация</a>
+                            <a href="#popup" class="menu_link">
+                                <?
+                                    require_once("app/models/account_model.php");
+                                    //вывод имени если оно есть, иначе вывод Авторизация
+                                    echo Account_model::getAccountName() ?? "Авторизация";
+                                ?>
+                                </a>
                         </li>
                         <li class="menu_item">
                             <img src="/images/linza.svg" alt="">
