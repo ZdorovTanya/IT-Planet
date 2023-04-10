@@ -239,15 +239,15 @@
                 </div>
 
                 <div class="popup__middle">
-                    <form method="post" action="">
+                    <form method="post" action="/main/login">
                         <div class="input__row">
                             <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
-                            <input id="UserEmail" type="email" placeholder="Введите Email">
+                            <input id="UserEmail" type="email" name="email" placeholder="Введите Email">
                         </div>
 
                         <div class="input__row">
                             <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
-                            <input id="UserPassword" type="password" placeholder="Введите пароль">
+                            <input id="UserPassword" type="password" name="password" placeholder="Введите пароль">
                         </div>
 
                         <div class="checkbox__row">
@@ -257,13 +257,15 @@
                             </label>
                             <a href="#" class="forgot">Забыли пароль?</a>
                         </div>
+
+                        <button type="submit">Войти</button>
  
                     </form>
                 </div>
 
                 
                 <div class="popup__footer">
-                    <a href="#" class="exist">Войти</a>
+                    <!-- <a href="#" class="exist">Войти</a> -->
                 </div>
 
             </div>
