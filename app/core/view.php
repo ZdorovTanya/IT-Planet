@@ -3,6 +3,8 @@
 class View{
 
     function render($content, $model=null){
-        include("app/views/".$content);
+        
+        require_once("app/views/".$content);
+
     }
 }

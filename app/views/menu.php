@@ -24,7 +24,7 @@
                             <img src="/images/avtorisation.svg" alt="">
 
                             <?
-                                $name = Account_model::getAccountName();
+                                $name = $model->getName();
 
                                 if (!isset($name))
                                     echo '<a href="#popup" class="menu_link">Авторизация</a>';

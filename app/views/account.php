@@ -33,11 +33,11 @@
                     <div class="about-yourself__row1">
 
                         <div class="about-yourself__row2">
-                            <div class="name _title">Анастасия</div>
-                            <div class="age _info-text">Возраст:</div>
-                            <div class="problem _info-text">Проблема:</div>
-                            <div class="hight _info-text"> <img src="/images/lockForPopup.svg" alt="срыто замком"> Рост:</div>
-                            <div class="weight _info-text"> <img src="/images/lockForPopup.svg" alt="скрыто замком"> Вес:</div>
+                            <div class="name _title"><? echo $model->getName() ?></div>
+                            <div class="age _info-text">Дата рождения: <? echo $model->getBirth() ?></div>
+                            <div class="problem _info-text">Проблема: <? echo $model->getProblem() ?></div>
+                            <div class="hight _info-text"> <img src="/images/lockForPopup.svg" alt="срыто замком"> Рост: <? echo $model->getHeight() ?></div>
+                            <div class="weight _info-text"> <img src="/images/lockForPopup.svg" alt="скрыто замком"> Вес: <? echo $model->getWeight() ?></div>
                         </div>
                        
                         <div class="registration-btn">

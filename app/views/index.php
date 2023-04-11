@@ -271,7 +271,7 @@
                             <label for="UserAge"></label>
                             <input id="UserAge" type="text" name ="birth" placeholder="Дата Вашего рождения">
                         </div>
-<!-- колонки попробовать -->
+                        <!-- колонки попробовать -->
                         <div class="input__row">
                             <label for="UserSex"></label>
                                 <input id="UserSex" type="text" name="sex" placeholder="Укажите Ваш пол">
