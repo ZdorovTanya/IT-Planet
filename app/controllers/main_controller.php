@@ -7,6 +7,7 @@ class Main_controller{
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
 
+        require_once("app/models/account_model.php");
         include("app/views/index.php");
 
     }
@@ -18,9 +19,11 @@ class Main_controller{
         require("app/models/account_model.php");
         $this->model = new Account_model();
 
-        if ($this->model->registration())
-            echo "registration done";
-        else echo "errors wit registration";
+        ($this->model->registration());
+        header("Location: /main/");
+        exit();
+        //     echo "registration done";
+        // else echo "errors wit registration";
 
     }
 
@@ -32,10 +35,13 @@ class Main_controller{
         require("app/models/account_model.php");
         $model = new Account_model();
 
-        if ($model->login()){
+        ($model->login());
+        $this->defaultPage();
+        header("Location: /main/");
+        exit();
             // setcookie("accountId", $model->getId());
-            echo "login";
-        } else echo "error wit login";
+        //     echo "login";
+        // } else echo "error wit login";
 
     }
 
