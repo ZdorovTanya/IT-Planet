@@ -7,7 +7,6 @@ class Main_controller extends Controller{
 
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
-        echo $_SESSION["accName"];
         
         $this->view->render("index.php", $this->model);
 
