@@ -24,7 +24,7 @@
                             <img src="/images/avtorisation.svg" alt="">
 
                             <?
-                                $name = $model->getName();
+                                $name = $_SESSION["accName"] ?? null;
 
                                 if (!isset($name))
                                     echo '<a href="#popup" class="menu_link">Авторизация</a>';

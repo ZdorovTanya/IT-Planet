@@ -34,9 +34,8 @@ class Account_model{
         if (is_null($acc))
             return false;
 
-        // $this->getMyAccount();
         static::$account = $acc;
-        header("accountName: ".$this->getName());
+        $_SESSION["accName"] = $this->getName();
         
         setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
 
