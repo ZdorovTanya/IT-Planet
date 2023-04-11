@@ -291,14 +291,32 @@
                             <div class="about-yourself__row1">
 
                                 <div class="about-yourself__row2">
-                                    <div class="name _title">Анастасия</div>
-                                    <div class="age _info-text">Дата рождения:</div>
-                                    <div class="problem _info-text">Проблема:</div>
-                                    <div class="hight _info-text"> <img src="/images/lockForPopup.svg" alt="срыто замком"> Рост:</div>
-                                    <div class="weight _info-text"> <img src="/images/lockForPopup.svg" alt="скрыто замком"> Вес:</div>
+                                 
+                                    <input id="personFIO" type="text" name="personFIO">
+
+                                    <div class="about-yourself__row3">
+                                        <label for="dateAge">Дата рождения:</label>
+                                        <input id="dateAge" type="text" name="dateAge">
+                                    </div>
+
+                                    <div class="about-yourself__row3">
+                                        <label for="personProblem">Проблема:</label>
+                                        <input id="personProblem" type="text" name="personProblem">
+                                    </div>
+                                    
+                                    <div class="about-yourself__row3">
+                                        <label for="personHight">Рост:</label>
+                                        <input id="personHight" type="text" name="personHight">
+                                    </div>
+
+                                    <div class="about-yourself__row3">
+                                        <label for="personWeight">Вес:</label>
+                                        <input id="personWeight" type="text" name="personWeight">
+                                    </div>
+               
                                 </div>
                             
-                                <div class="registration-btn">
+                                <div class="save-btn">
                                     <a href="#popupChangeAccount"><img src="/images/saveChangeBtn.svg" alt=""></a>
                                     
                                 </div>
@@ -313,10 +331,12 @@
 
                             <div class="history__box">                      
                                 <div class="my-history">
-                                    Длинный, очень длинный текст о моей жизни. Я такая классная вообще, вы бы знали.
+                                    <input id="personHistory" type="text" name="personHistory">
+
+                                    <!-- Длинный, очень длинный текст о моей жизни. Я такая классная вообще, вы бы знали.
                                     Но, на самом деле по ночам мне очень грустно. Я каждый день прихожу домой с Универа, беру свою кошку Люсю и иду смотреть турецкие сериалы взахлёб. 
                                     А это всё потому что у меня не получается найти друзей...
-                                    Я просто хочу дом на Бали и ничего не делая попивать кокосовое молоко на пляже...
+                                    Я просто хочу дом на Бали и ничего не делая попивать кокосовое молоко на пляже... -->
                                 </div>
                             </div>
                         </div>
