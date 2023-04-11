@@ -5,23 +5,25 @@ require_once("app/core/view.php");
 
 class Main_controller extends Controller{
 
+    function __construct(){
+        parent::__construct();
+        require("app/models/account_model.php");
+        $this->model = new Account_model();
+    }
+
 
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
 
-        require_once("app/models/account_model.php");
-        // include("app/views/index.php");
-        $this->view = new View();
-        $this->view->render("index.php");
+        $this->model->getMyAccount();
+        
+        $this->view->render("index.php", $this->model);
 
     }
 
 
     //выполняет регистрацию нового акк
     function register(){
-
-        require("app/models/account_model.php");
-        $this->model = new Account_model();
 
         $this->model->registration();
         $this->model->login();
@@ -36,9 +38,6 @@ class Main_controller extends Controller{
     //выводит сообщение об удачном / неудачном входе
     function login(){
 
-        require("app/models/account_model.php");
-        $this->model = new Account_model();
-
         $this->model->login();
         
         header("Location: /main/");
@@ -46,7 +45,4 @@ class Main_controller extends Controller{
 
     }
 
-    function getName(){
-        $this->model->getAccountName();    
-    }
 }
