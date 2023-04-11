@@ -1,0 +1,153 @@
+/* @import "../../study/null.scss"; */
+
+.popupChangeAccount {
+    z-index: 2000;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.8s ease 0s;
+}
+
+/* ----------- Анимация попапа */
+
+.popupChangeAccount:target{
+    opacity: 1;
+    visibility: visible;
+}
+     
+.popupChangeAccount:target .popupChangeAccount__contetnt{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+/* ----------------------- */
+
+.popupChangeAccount__area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+
+}
+
+.popupChangeAccount__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+
+}
+.popupChangeAccount__contetnt {
+
+    min-width: 427px;
+    min-height: 261px;
+
+    position: relative;
+
+    border-radius: 40px;
+
+    transform: translate(0px, -100%);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+}
+
+/* контент */
+
+.about-yourself__wrapper1 {
+    padding: 65px;
+
+    width: 1198px;
+    height: 653px;
+
+    background: linear-gradient(112.99deg, #DAE2EB 16%, rgba(230, 240, 236, 0) 86.2%), rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 67px;
+}
+
+/* .about-yourself__my-information {
+
+    display: flex;
+
+} */
+.about-yourself__row1 {
+
+    display: flex;
+
+}
+
+.about-yourself__row2 {
+    margin-left: 30px;
+    padding-left: 20px;
+
+    height: 230px;
+
+    border-left: 3px solid #396857;
+}
+
+.registration-btn{
+    background-position:right top;
+    margin-left: 350px;   
+}
+
+.hight img, .weight img {
+    height: 25px;
+    padding-top: 3px;
+}
+
+/* ----------о себе */
+
+.about-yourself__my-biograpy {
+    margin-top: 46px;
+    width: 1085px;
+    height: 269px;
+
+    background: #D7E1DD;
+    border: 3px solid #396857;
+    border-radius: 58px;
+}
+
+.about__box{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    border-bottom: 3px solid #396857;;
+}
+
+.about-me {
+    padding-left: 50px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #000000;
+}
+
+.history__box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 199px;
+}
+
+.my-history {
+    padding: 50px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #000000;
+}
