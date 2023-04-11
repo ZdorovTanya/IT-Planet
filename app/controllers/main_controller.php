@@ -1,14 +1,18 @@
 <?php
 
-class Main_controller{
-    private $model;
+require_once("app/core/controller.php");
+require_once("app/core/view.php");
+
+class Main_controller extends Controller{
 
 
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
 
         require_once("app/models/account_model.php");
-        include("app/views/index.php");
+        // include("app/views/index.php");
+        $this->view = new View();
+        $this->view->render("index.php");
 
     }
 

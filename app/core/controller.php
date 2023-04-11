@@ -2,6 +2,6 @@
 
 class Controller{
 
-    private $model;
-    private $view;
+    protected $model;
+    protected $view;
 }

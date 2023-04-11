@@ -25,7 +25,6 @@
 
                             <?
                                 $name = Account_model::getAccountName();
-                                // echo $name;
 
                                 if (!isset($name))
                                     echo '<a href="#popup" class="menu_link">Авторизация</a>';
@@ -33,12 +32,6 @@
                                     echo '<a href="/account/" class="menu_link">'.$name."</a>";
                             ?>
 
-                            <!-- <a href="#popup" class="menu_link">
-                                <?
-                                    //вывод имени если оно есть, иначе вывод Авторизация
-                                    //echo <a hreef>Account_model::getAccountName()</a> ?? "Авторизация";
-                                ?>
-                            </a> -->
                         </li>
                     </ul>
                </nav>
