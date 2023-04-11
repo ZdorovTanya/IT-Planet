@@ -22,12 +22,23 @@
                         </li>
                         <li class="menu_item">
                             <img src="/images/avtorisation.svg" alt="">
-                            <a href="#popup" class="menu_link">
+
+                            <?
+                                $name = Account_model::getAccountName();
+                                // echo $name;
+
+                                if (!isset($name))
+                                    echo '<a href="#popup" class="menu_link">Авторизация</a>';
+                                else 
+                                    echo '<a href="/account/" class="menu_link">'.$name."</a>";
+                            ?>
+
+                            <!-- <a href="#popup" class="menu_link">
                                 <?
                                     //вывод имени если оно есть, иначе вывод Авторизация
-                                    echo Account_model::getAccountName() ?? "Авторизация";
+                                    //echo <a hreef>Account_model::getAccountName()</a> ?? "Авторизация";
                                 ?>
-                            </a>
+                            </a> -->
                         </li>
                     </ul>
                </nav>
