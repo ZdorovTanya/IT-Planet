@@ -25,7 +25,7 @@
     margin: 30px auto;
 }
 
-.menu_item:not(:last-child):hover{
+.menu_item:hover{
     background: #FFF27D;
     border-radius: 30px;
     // УБОГО
@@ -52,17 +52,6 @@
 }
 
 
-
-.menu_item:last-child{
-    border: 1px solid black;
-    border-radius: 20px;
-}
-
-.menu_item:last-of-type a{
-    color: rgba(0, 0, 0, 0.4);
-    padding: 20px 60px 20px 0px;
-    // УБОГО - СДЕЛАТЬ ФЛЕКС?
-}
 
 .menu_item:last-of-type img{
     padding-left: 10px;
