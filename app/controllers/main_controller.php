@@ -36,6 +36,7 @@ class Main_controller{
         $this->model = new Account_model();
 
         $this->model->login();
+        
         header("Location: /main/");
         exit();
 
