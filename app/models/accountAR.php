@@ -32,7 +32,12 @@ class Account{
 
     //создание подключения к бд
     static private function createConnect(){
-        if (!static::$pdo) static::$pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root", "123");
+        if (!static::$pdo)
+            try{
+                static::$pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root", "123");
+            } catch (PDOException $ex){
+                static::$pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root");
+            }
     }
 
 
