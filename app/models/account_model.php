@@ -3,7 +3,7 @@
 require_once("app/models/accountAR.php");
 
 class Account_model{
-    static private $account;
+    static public $account;
 
 
     //регистрация нового пользователя
@@ -33,25 +33,47 @@ class Account_model{
         if (is_null(static::$account))
             return false;
 
+        $this->getMyAccount();
         setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
-        // echo json_encode(static::$account);
 
         return true;
 
     }
 
     //возвращает имя пользователя или null если такого нет
-    static function getAccountName(){
-        static::$account = new Account();
+    function getAccountName(){
         if (!isset($_COOKIE["accountId"])) return null;
-        return static::$account->findNameById($_COOKIE["accountId"]);
+        static::$account = Account::findById($_COOKIE["accountId"]);
+        return $this->getName();
+    }
+
+    //ищет текущий акк
+    function getMyAccount(){
+        static::$account = Account::findById($_COOKIE["accountId"]);
+    }
+
+    function getId(){
+        return static::$account->id;
     }
 
     function getName(){
         return static::$account->name;
     }
 
-    function getId(){
-        return static::$account->id;
+    function getBirth(){
+        return static::$account->birth;
     }
+
+    function getProblem(){
+        return static::$account->problem;
+    }
+
+    function getHeight(){
+        
+    }
+
+    function getWeight(){
+
+    }
+
 }

@@ -103,4 +103,27 @@ class Account{
 
         return $stmt["name"];
     }
+
+    //поиск акк по id
+    //возвращает объект
+    static function findById($id){
+
+        static::createConnect();
+
+        $stmt = static::$pdo->prepare("SELECT * FROM `accounts` WHERE `id`=:id");
+
+        $stmt->bindParam(":id",  $id);
+
+        $stmt->execute();
+        if ($stmt->rowCount() != 1) return null;
+
+        $obj = new Account();
+
+        $stmt = $stmt->fetch();
+
+        foreach ($stmt as $key=>$value)
+            $obj->$key = $value;
+
+        return $obj;
+    }
 }
