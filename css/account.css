@@ -136,7 +136,7 @@ body {
 
 .registration-btn {
   background-position: right top;
-  margin-left: 350px;
+  /* margin-left: 350px; */
 }
 
 .hight img, .weight img {
