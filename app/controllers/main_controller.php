@@ -19,11 +19,11 @@ class Main_controller{
         require("app/models/account_model.php");
         $this->model = new Account_model();
 
-        ($this->model->registration());
+        $this->model->registration();
+        $this->model->login();
+
         header("Location: /main/");
         exit();
-        //     echo "registration done";
-        // else echo "errors wit registration";
 
     }
 
@@ -33,15 +33,11 @@ class Main_controller{
     function login(){
 
         require("app/models/account_model.php");
-        $model = new Account_model();
+        $this->model = new Account_model();
 
-        ($model->login());
-        $this->defaultPage();
+        $this->model->login();
         header("Location: /main/");
         exit();
-            // setcookie("accountId", $model->getId());
-        //     echo "login";
-        // } else echo "error wit login";
 
     }
 
