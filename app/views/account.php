@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Аккаунт</title>
+    <title>Аккаунт</title> 
 
     <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/popupChangeAccount.css">
+
 
     <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="/css/popup.css">
+    <!-- <link rel="stylesheet" href="/css/popup.css"> -->
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +44,8 @@
                         </div>
                        
                         <div class="registration-btn">
-                            <img src="/images/btnChangeProfile.svg" alt="">
+                            <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
+                            
                         </div>
                     </div>
 
@@ -269,6 +273,62 @@
             </div>
         </div>
 
+
+    </div>
+
+    <div id="popupChangeAccount" class="popupChangeAccount">
+        <a href="#header" class="popupChangeAccount__area"></a>
+        <div class="popupChangeAccount__body">
+            <div class="popupChangeAccount__contetnt">
+                
+                <div class="about-yourself">
+                    <div class="about-yourself__wrapper1 _container">
+
+                        <div class="about-yourself__my-information">
+
+                            <img src="/images/importFoto.svg" alt="загрузка фото">
+
+                            <div class="about-yourself__row1">
+
+                                <div class="about-yourself__row2">
+                                    <div class="name _title">Анастасия</div>
+                                    <div class="age _info-text">Дата рождения:</div>
+                                    <div class="problem _info-text">Проблема:</div>
+                                    <div class="hight _info-text"> <img src="/images/lockForPopup.svg" alt="срыто замком"> Рост:</div>
+                                    <div class="weight _info-text"> <img src="/images/lockForPopup.svg" alt="скрыто замком"> Вес:</div>
+                                </div>
+                            
+                                <div class="registration-btn">
+                                    <a href="#popupChangeAccount"><img src="/images/saveChangeBtn.svg" alt=""></a>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="about-yourself__my-biograpy">
+                            <div class="about__box">
+                                <div class="about-me">О себе:</div>
+                            </div>
+
+                            <div class="history__box">                      
+                                <div class="my-history">
+                                    Длинный, очень длинный текст о моей жизни. Я такая классная вообще, вы бы знали.
+                                    Но, на самом деле по ночам мне очень грустно. Я каждый день прихожу домой с Универа, беру свою кошку Люсю и иду смотреть турецкие сериалы взахлёб. 
+                                    А это всё потому что у меня не получается найти друзей...
+                                    Я просто хочу дом на Бали и ничего не делая попивать кокосовое молоко на пляже...
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>
