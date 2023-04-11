@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Аккаунт</title>
+    <title>Аккаунт</title> 
 
     <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/popupChangeAccount.css">
+
 
     <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="/css/popup.css">
+    <!-- <link rel="stylesheet" href="/css/popup.css"> -->
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +44,8 @@
                         </div>
                        
                         <div class="registration-btn">
-                            <img src="/images/btnChangeProfile.svg" alt="">
+                            <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
+                            
                         </div>
                     </div>
 
@@ -269,6 +273,22 @@
             </div>
         </div>
 
+
+    </div>
+
+    <div id="popupChangeAccount" class="popup">
+        <a href="#header" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__contetnt">
+                
+
+                            
+                
+             
+
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>
