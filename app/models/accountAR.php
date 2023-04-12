@@ -11,6 +11,8 @@ class Account{
     public $problem;
     public $email;
     public $password;
+    public $height;
+    public $weight;
 
 
 
@@ -66,14 +68,18 @@ class Account{
 
         $this->createConnect();
         
-        $stmt = static::$pdo->prepare("UPDATE `accounts` SET `name`=:name,`birth`=:birth, `goal`=:goal,`problem`=:problem WHERE id=$this->id");
+        $stmt = static::$pdo->prepare("UPDATE `accounts` SET `name`=:name,`birth`=:birth, `goal`=:goal,`problem`=:problem, `height`=:height, `weight`=:weight WHERE id=$this->id");
         
         $stmt->bindParam(":name", $this->name);
         $stmt->bindParam(":birth", $this->birth);
         $stmt->bindParam(":goal", $this->goal);
         $stmt->bindParam(":problem", $this->problem);
+        $stmt->bindParam(":height", $this->height);
+        $stmt->bindParam(":weight", $this->weight);
 
-        $stmt->execute();
+        try{
+            $stmt->execute();
+        } catch (PDOException){};
     }
 
 

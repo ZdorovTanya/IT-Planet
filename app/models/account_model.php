@@ -46,24 +46,20 @@ class Account_model{
     //ищет текущий акк
     function getMyAccount(){
         if (!isset($_SESSION["accId"])) return null;
-        // echo "before finding ".json_encode($this->account)."\n";
         $this->account = Account::findById($_SESSION["accId"]);
-        // echo "after finding ".json_encode($this->account)."\n";
     }
 
 
     function updateAccount(){
-        // echo json_encode($this->account)." end\n";
 
         if (!empty($_POST["personFIO"])) $this->account->name = $_POST["personFIO"];
         if (!empty($_POST["dateAge"])) $this->account->birth = $_POST["dateAge"];
         if (!empty($_POST["personProblem"])) $this->account->problem = $_POST["personProblem"];
-        // $this->account->height = $_POST["personHight"] ?? $this->account->name;
-        // $this->account->weight = $_POST["personWeight"] ?? $this->account->name;
+        if (!empty($_POST["personHight"])) $this->account->height = $_POST["personHight"];
+        if (!empty($_POST["personWeight"])) $this->account->weight = $_POST["personWeight"];
 
         $this->account->update();
         $_SESSION["accName"] = $this->getName();
-        // echo json_encode($this->account);
     }
 
     function getId(){
@@ -83,11 +79,11 @@ class Account_model{
     }
 
     function getHeight(){
-        
+        return $this->account->height;
     }
 
     function getWeight(){
-
+        return $this->account->weight;
     }
 
 }
