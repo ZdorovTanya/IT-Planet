@@ -5,19 +5,19 @@ require_once("app/core/controller.php");
 class Registration_controller extends Controller{
 
     function defaultPage(){
-        $this->view->render("registration.php");
+        $this->view->render("login.php");
     }
     
 
-    //выполняет регистрацию нового акк
-    function register(){
-
+    //выполняет вход в существующий акк
+    //выводит сообщение об удачном / неудачном входе
+    function login(){
+        
         require("app/models/account_model.php");
         $this->model = new Account_model();
 
-        $this->model->registration();
         $this->model->login();
-
+        
         header("Location: /main/");
         exit();
 

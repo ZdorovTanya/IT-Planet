@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="popup__middle__2">
-                    <form method="post" action="/main/register">
+                    <form method="post" action="/registration/register">
                         <div class="input__row">
                             <label for="UserName"></label>
                             <input id="UserName" type="text" name="name" placeholder="Введите Ваше имя/ник">

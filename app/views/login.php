@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="popup__middle">
-                    <form method="post" action="/main/login">
+                    <form method="post" action="/login/login">
                         <div class="input__row">
                             <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
                             <input id="UserEmail" type="email" name="email" placeholder="Введите Email">
