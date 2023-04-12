@@ -86,6 +86,11 @@ body{
   position: relative;
 }
 
+._container{
+  max-width: 1366px;
+  margin: 0px auto;
+}
+
 
 
 
