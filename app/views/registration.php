@@ -15,7 +15,7 @@
 <body>
         <!-- попап регистрации и входа -->
         <div id="popup" class="popup">
-        <a href="#header" class="popup__area"></a>
+        <!-- <a href="#header" class="popup__area"></a> -->
         <div class="popup__body">
             <div class="popup__contetnt">
                 <!-- <a href="#header" class="popup__close">x</a> -->
@@ -61,7 +61,7 @@
     </div>
 
     <div id="popup_registration" class="popup">
-        <a href="#header" class="popup__area"></a>
+        <!-- <a href="#header" class="popup__area"></a> -->
         <div class="popup__body">
             <div class="popup__contetnt">
                 <!-- <a href="#header" class="popup__close">x</a> -->
