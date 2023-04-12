@@ -27,7 +27,7 @@
                                 $name = $_SESSION["accName"] ?? null;
 
                                 if (!isset($name))
-                                    echo '<a href="#popup" class="menu_link">Авторизация</a>';
+                                    echo '<a href="/registration/" class="menu_link">Авторизация</a>';
                                 else 
                                     echo '<a href="/account/" class="menu_link">'.$name."</a>";
                             ?>
