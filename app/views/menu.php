@@ -9,7 +9,7 @@
                             <a href="/main/" class="menu_link">Главная</a>
                         </li>
                         <li class="menu_item"> 
-                            <a href="forum" class="menu_link">Форум</a>
+                            <a href="/forum/" class="menu_link">Форум</a>
                         </li>
                         <li class="menu_item">
                             <a href="" class="menu_link">Тесты</a>
