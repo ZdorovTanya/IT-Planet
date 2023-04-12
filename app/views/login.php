@@ -13,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- попап регистрации и входа
+        <!-- попап регистрации и входа -->
         <div id="popup" class="popup">
         <div class="popup__body">
             <div class="popup__contetnt">
                 
                 <div class="popup__title">
-                    <a href="#" class="entrance">Вход</a>
-                    <a href="#popup_registration" class="registration">Регистрация</a>
+                    <a href="/login/" class="entrance">Вход</a>
+                    <a href="/registration/" class="registration">Регистрация</a>
                 </div>
 
                 <div class="popup__middle">
@@ -56,15 +56,15 @@
             </div>
             
         </div>
-    </div> -->
+    </div>
 
-    <div id="popup_registration" class="popup">
+    <!-- <div id="popup_registration" class="popup">
         <div class="popup__body">
             <div class="popup__contetnt">
                 
                 <div class="popup__title">
-                    <a href="/login/" class="entrance">Вход</a>
-                    <a href="/registration/" class="registration">Регистрация</a>
+                    <a href="#popup" class="entrance">Вход</a>
+                    <a href="#" class="registration">Регистрация</a>
                 </div>
 
                 <div class="popup__middle__2">
@@ -129,6 +129,6 @@
             </div>
             
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
