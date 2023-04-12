@@ -15,7 +15,7 @@ class Account_model{
         
         if (is_null(Account::findByEmailPassword($_POST["email"], md5($_POST["password"])))){
             $newAccount->save();
-            static::$account = $newAccount;
+            $this->account = $newAccount;
             return true;
         }
 
@@ -28,48 +28,58 @@ class Account_model{
     //возвращает true в случае удачного входа
     function login(){
 
-        // static::$account = new Account();
         $acc = Account::findByEmailPassword($_POST["email"], md5($_POST["password"]));
 
         if (is_null($acc))
             return false;
 
-        static::$account = $acc;
+        $this->account = $acc;
         $_SESSION["accName"] = $this->getName();
+        $_SESSION["accId"] = $this->getId();
         
-        setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
+        // setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
 
         return true;
 
     }
 
-    //возвращает имя пользователя или null если такого нет
-    function getAccountName(){
-        // if (!isset($_COOKIE["accountId"])) return null;
-        // static::$account = Account::findById($_COOKIE["accountId"]);
-        // return $this->getName();
-    }
-
     //ищет текущий акк
     function getMyAccount(){
-        if (!isset($_COOKIE["accountId"])) return null;
-        static::$account = Account::findById($_COOKIE["accountId"]);
+        if (!isset($_SESSION["accId"])) return null;
+        // echo "before finding ".json_encode($this->account)."\n";
+        $this->account = Account::findById($_SESSION["accId"]);
+        // echo "after finding ".json_encode($this->account)."\n";
+    }
+
+
+    function updateAccount(){
+        // echo json_encode($this->account)." end\n";
+
+        if (!empty($_POST["personFIO"])) $this->account->name = $_POST["personFIO"];
+        if (!empty($_POST["dateAge"])) $this->account->birth = $_POST["dateAge"];
+        if (!empty($_POST["personProblem"])) $this->account->problem = $_POST["personProblem"];
+        // $this->account->height = $_POST["personHight"] ?? $this->account->name;
+        // $this->account->weight = $_POST["personWeight"] ?? $this->account->name;
+
+        $this->account->update();
+        $_SESSION["accName"] = $this->getName();
+        // echo json_encode($this->account);
     }
 
     function getId(){
-        return static::$account->id;
+        return $this->account->id;
     }
 
     function getName(){
-        return static::$account->name ?? null;
+        return $this->account->name ?? null;
     }
 
     function getBirth(){
-        return static::$account->birth;
+        return $this->account->birth;
     }
 
     function getProblem(){
-        return static::$account->problem;
+        return $this->account->problem;
     }
 
     function getHeight(){

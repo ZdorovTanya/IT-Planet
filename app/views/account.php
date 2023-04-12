@@ -289,37 +289,42 @@
                             <img src="/images/importFoto.svg" alt="загрузка фото">
 
                             <div class="about-yourself__row1">
+                                
+                                <form method="POST" action="/account/change">
 
-                                <div class="about-yourself__row2">
-                                 
-                                    <input id="personFIO" type="text" name="personFIO">
-
-                                    <div class="about-yourself__row3">
-                                        <label for="dateAge">Дата рождения:</label>
-                                        <input id="dateAge" type="text" name="dateAge">
-                                    </div>
-
-                                    <div class="about-yourself__row3">
-                                        <label for="personProblem">Проблема:</label>
-                                        <input id="personProblem" type="text" name="personProblem">
-                                    </div>
+                                    <div class="about-yourself__row2">
                                     
-                                    <div class="about-yourself__row3">
-                                        <label for="personHight">Рост:</label>
-                                        <input id="personHight" type="text" name="personHight">
+                                        <input id="personFIO" type="text" name="personFIO">
+
+                                        <div class="about-yourself__row3">
+                                            <label for="dateAge">Дата рождения:</label>
+                                            <input id="dateAge" type="text" name="dateAge">
+                                        </div>
+
+                                        <div class="about-yourself__row3">
+                                            <label for="personProblem">Проблема:</label>
+                                            <input id="personProblem" type="text" name="personProblem">
+                                        </div>
+                                        
+                                        <div class="about-yourself__row3">
+                                            <label for="personHight">Рост:</label>
+                                            <input id="personHight" type="text" name="personHight">
+                                        </div>
+
+                                        <div class="about-yourself__row3">
+                                            <label for="personWeight">Вес:</label>
+                                            <input id="personWeight" type="text" name="personWeight">
+                                        </div>
+                
+                                    </div>
+                                
+                                    <div class="save-btn">
+                                        <button type="submit"><a href="#"><img src="/images/saveChangeBtn.svg" alt=""></a></button>
+                                        
                                     </div>
 
-                                    <div class="about-yourself__row3">
-                                        <label for="personWeight">Вес:</label>
-                                        <input id="personWeight" type="text" name="personWeight">
-                                    </div>
-               
-                                </div>
-                            
-                                <div class="save-btn">
-                                    <a href="#"><img src="/images/saveChangeBtn.svg" alt=""></a>
-                                    
-                                </div>
+                                </form>
+
                             </div>
 
                         </div>

@@ -62,6 +62,21 @@ class Account{
     }
 
 
+    function update(){
+
+        $this->createConnect();
+        
+        $stmt = static::$pdo->prepare("UPDATE `accounts` SET `name`=:name,`birth`=:birth, `goal`=:goal,`problem`=:problem WHERE id=$this->id");
+        
+        $stmt->bindParam(":name", $this->name);
+        $stmt->bindParam(":birth", $this->birth);
+        $stmt->bindParam(":goal", $this->goal);
+        $stmt->bindParam(":problem", $this->problem);
+
+        $stmt->execute();
+    }
+
+
     //поиск по почте и паролю
     //возвращает объект пользователя (этого класса)
     static function findByEmailPassword($email, $password){
@@ -121,9 +136,11 @@ class Account{
 
         $stmt = $stmt->fetch();
 
-        foreach ($stmt as $key=>$value)
-            $obj->$key = $value;
 
+        foreach ($obj as $key=>$value)
+            $obj->$key = $stmt[$key];
+
+            // echo "stmt ".json_encode($obj)."\n";
         return $obj;
     }
 }
