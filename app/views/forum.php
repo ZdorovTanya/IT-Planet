@@ -27,20 +27,21 @@
         <div class="card">
             <div class="card__wrapper">
                 <div class="card__content">
-                    <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="state-picture">
+                    <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
                     <div class="title-filter">Анорексия</div>
                     <div class="main-title-block">
-                        <div class="main-title">Название статьи</div>
+                    <div class="main-title"><?= $model->getTitle(1)?></div>
                         <img src="/images/arrowUpRight.svg" alt="разворачивание статьи">
                     </div>
                     <div class="card-text">
-                        Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно.
+                        <?= $model->getText(1)?>
+                        <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
                     </div>
                     <div class="avatar-info">
-                        <img src="/images/Avatar (1).svg" alt="" class="foto">
+                        <img src="/images/Avatar (1).svg" alt="" class="foro">
                         <div class="name-date-box">
-                            <div class="author">Танюшка</div>
-                            <div class="publication-date">12.03.2023</div>
+                            <div class="author"><?= $model->getAuthor(1)?></div>
+                            <div class="publication-date"><?= $model->getDate(1)?></div>
                         </div>
                     </div>
                 </div>

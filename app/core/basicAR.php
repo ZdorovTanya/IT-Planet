@@ -3,7 +3,7 @@
 class basicAR{
     
     static private $table;
-    static private $pdo;
+    static public $pdo;
 
     
     //создание подключения к бд
