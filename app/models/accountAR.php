@@ -4,7 +4,6 @@ require_once("app/core/basicAR.php");
 
 class Account extends basicAR{
     static private $table = "accounts";
-    static private $pdo;
     public $id;
     public $name;
     public $birth;
@@ -113,7 +112,7 @@ class Account extends basicAR{
         $stmt->execute();
         $stmt = $stmt->fetch();
 
-        return $stmt["name"];
+        return $stmt["name"] ?? "eatNormal";
     }
 
     //поиск акк по id
