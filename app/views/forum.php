@@ -9,7 +9,7 @@
 
 
     <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/forum.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,20 +26,22 @@
         <!-- карточка форума -->
         <div class="card">
             <div class="card__wrapper">
-                <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                <div class="title-filter">Анорексия</div>
-                <div class="main-title-block">
-                    <div class="main-title">Название статьи</div>
-                    <img src="/images/arrowUpRight.svg" alt="разворачивание статьи">
-                </div>
-                <div class="card-text">
-                    Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно.
-                </div>
-                <div class="avatar-info">
-                    <img src="/images/Avatar (1).svg" alt="" class="foro">
-                    <div class="name-date-box">
-                        <div class="author">Танюшка</div>
-                        <div class="publication-date">12.03.2023</div>
+                <div class="card__content">
+                    <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="state-picture">
+                    <div class="title-filter">Анорексия</div>
+                    <div class="main-title-block">
+                        <div class="main-title">Название статьи</div>
+                        <img src="/images/arrowUpRight.svg" alt="разворачивание статьи">
+                    </div>
+                    <div class="card-text">
+                        Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно.
+                    </div>
+                    <div class="avatar-info">
+                        <img src="/images/Avatar (1).svg" alt="" class="foto">
+                        <div class="name-date-box">
+                            <div class="author">Танюшка</div>
+                            <div class="publication-date">12.03.2023</div>
+                        </div>
                     </div>
                 </div>
 
