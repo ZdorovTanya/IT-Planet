@@ -111,9 +111,10 @@
 
 .card__content{
     width: 336px;
+    height: 534px;
 }
 .state-picture {
-    
+    margin-bottom: 32px;
 }
 .title-filter {
     font-style: normal;
@@ -132,9 +133,14 @@
     font-size: 24px;
     line-height: 32px;
 
+    min-height: 28px;
+    max-height: 89px;
+
     color: #101828;
 
     width: 90%;
+
+    margin-bottom: 12px;
 }
 .card-text {
     font-style: normal;
@@ -142,13 +148,20 @@
     font-size: 16px;
     line-height: 20px;
 
+    max-height: 144px;
+    min-height: 72px;
+
     color: #667085;
+    flex: 0 1 auto;
+
+    margin-bottom: 15px;
 
 }
 .avatar-info {
     display: flex;
 }
 .foto {
+    margin-right: 12px;
 }
 .name-date-box {
     /* display: flex; */
