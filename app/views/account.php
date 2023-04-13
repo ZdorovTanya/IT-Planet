@@ -105,7 +105,7 @@
 
 
             </div>
-        </div>
+        </div> 
 
         <div class="article">
             <div class="article__wrapper _container">

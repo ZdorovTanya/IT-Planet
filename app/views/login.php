@@ -23,36 +23,39 @@
                     <a href="/registration/" class="registration">Регистрация</a>
                 </div>
 
-                <div class="popup__middle">
-                    <form method="post" action="/login/login">
-                        <div class="input__row">
-                            <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
-                            <input id="UserEmail" type="email" name="email" placeholder="Введите Email">
-                        </div>
+                <form method="post" action="/login/login">
 
-                        <div class="input__row">
-                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
-                            <input id="UserPassword" type="password" name="password" placeholder="Введите пароль">
-                        </div>
+                    <div class="popup__middle">
+                        
+                            <div class="input__row">
+                                <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
+                                <input id="UserEmail" type="email" name="email" placeholder="Введите Email">
+                            </div>
 
-                        <div class="checkbox__row">
-                            <label class="rememberMe">
-                                <input type="checkbox" id="save" name="saveMe"> 
-                                Запомнить меня
-                            </label>
-                            <a href="#" class="forgot">Забыли пароль?</a>
-                        </div>
+                            <div class="input__row">
+                                <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
+                                <input id="UserPassword" type="password" name="password" placeholder="Введите пароль">
+                            </div>
 
+                            <div class="checkbox__row">
+                                <label class="rememberMe">
+                                    <input type="checkbox" id="save" name="saveMe"> 
+                                    Запомнить меня
+                                </label>
+                                <a href="#" class="forgot">Забыли пароль?</a>
+                            </div>
+
+                            <!-- <button type="submit">Войти</button> -->
+    
+                        
+                    </div>
+
+                    
+                    <div class="popup__footer">
                         <button type="submit">Войти</button>
- 
-                    </form>
-                </div>
-
-                
-                <div class="popup__footer">
-
-                </div>
-
+                    </div>
+                    
+                </form>
             </div>
             
         </div>
