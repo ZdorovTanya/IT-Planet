@@ -1,6 +1,8 @@
 <?php
 
-class Account{
+require_once("app/core/basicAR.php");
+
+class Account extends basicAR{
     static private $table = "accounts";
     static private $pdo;
     public $id;
@@ -29,17 +31,6 @@ class Account{
         $this->email = $email;
         $this->password = $password;
 
-    }
-
-
-    //создание подключения к бд
-    static private function createConnect(){
-        if (!static::$pdo)
-            try{
-                static::$pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root", "123");
-            } catch (PDOException $ex){
-                static::$pdo = new PDO("mysql:host=localhost;dbname=eatNormal", "root");
-            }
     }
 
 
