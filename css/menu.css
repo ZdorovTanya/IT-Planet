@@ -86,7 +86,7 @@ body{
   position: relative;
 }
 
-._container{
+._container{ 
   max-width: 1366px;
   margin: 0px auto;
 }
