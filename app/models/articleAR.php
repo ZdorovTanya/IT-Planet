@@ -26,7 +26,7 @@ class Article extends basicAR{
         foreach ($obj as $key=>$value)
             $obj->$key = $stmt[$key];
         
-        $obj->author = Account::findNameById($id);
+        $obj->author = Account::findNameById($obj->author);
 
         return $obj;
 
