@@ -7,7 +7,6 @@
     <title>Форум</title>
 
 
-
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/forum.css">
 
@@ -23,31 +22,86 @@
             include("app/views/menu.php");
         ?> 
 
-        <!-- карточка форума -->
-        <div class="card">
-            <div class="card__wrapper">
-                <div class="card__content">
-                    <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                    <div class="title-filter">Анорексия</div>
-                    <div class="main-title-block">
-                    <div class="main-title"><?= $model->getTitle(1)?></div>
-                        <img src="/images/arrowUpRight.svg" alt="разворачивание статьи">
-                    </div>
-                    <div class="card-text">
-                        <?= $model->getText(1)?>
-                        <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
-                    </div>
-                    <div class="avatar-info">
-                        <img src="/images/Avatar (1).svg" alt="" class="foro">
-                        <div class="name-date-box">
-                            <div class="author"><?= $model->getAuthor(1)?></div>
-                            <div class="publication-date"><?= $model->getDate(1)?></div>
-                        </div>
-                    </div>
-                </div>
+        <section class="forum-articles">
+            <div class="container">
+                <div class="forum-articles__body">
 
+                    <!-- карточка форума -->
+                    <article class="card">
+                        <div class="card__wrapper _ortorecsia">
+                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
+                            <div class="title-filter">Орторексия</div>
+                            <div class="main-title"><?= $model->getTitle(1)?></div>
+                            <div class="card-text">
+                                <?= $model->getText(1)?>
+                                <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
+                            </div>
+                            <div class="avatar-info">
+                                <img src="/images/Avatar (1).svg" alt="" class="foro">
+                                <div class="name-date-box">
+                                    <div class="author"><?= $model->getAuthor(1)?></div>
+                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- карточка форума -->
+                    <article class="card">
+                        <div class="card__wrapper _anorecsia">
+                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
+                            <div class="title-filter">Анорексия</div>
+                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
+                            </div>
+                            <div class="avatar-info">
+                                <img src="/images/Avatar (1).svg" alt="" class="foro">
+                                <div class="name-date-box">
+                                    <div class="author"><?= $model->getAuthor(1)?></div>
+                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- карточка форума -->
+                    <article class="card">
+                        <div class="card__wrapper _boolimia">
+                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
+                            <div class="title-filter">Булимия</div>
+                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
+                            </div>
+                            <div class="avatar-info">
+                                <img src="/images/Avatar (1).svg" alt="" class="foro">
+                                <div class="name-date-box">
+                                    <div class="author"><?= $model->getAuthor(1)?></div>
+                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__wrapper _compulsia">
+                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
+                            <div class="title-filter">Компульсивные переедания</div>
+                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
+                            </div>
+                            <div class="avatar-info">
+                                <img src="/images/Avatar (1).svg" alt="" class="foro">
+                                <div class="name-date-box">
+                                    <div class="author"><?= $model->getAuthor(1)?></div>
+                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>
