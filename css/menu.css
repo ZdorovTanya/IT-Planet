@@ -80,7 +80,7 @@ body{
   font-family: 'Roboto Mono', monospace;
 }
 
-.wrapper{
+/* .wrapper{
   min-height: 100%;
   overflow: hidden;
   position: relative;
@@ -89,7 +89,7 @@ body{
 ._container{ 
   max-width: 1366px;
   margin: 0px auto;
-}
+} */
 
 
 /* scss */

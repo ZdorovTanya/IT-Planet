@@ -43,10 +43,18 @@
                             <div class="weight _info-text"> <img src="/images/lockForPopup.svg" alt="скрыто замком"> Вес: <? echo $model->getWeight() ?></div>
                         </div>
                        
-                        <div class="registration-btn">
-                            <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
-                            
+                        <div class="btn-box">
+                            <div class="registration-btn">
+                                <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
+                            </div>
+
+                            <div class="exist-btn">
+                                <button type="submit" action="">
+                                    <a href="#"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
+                                </button>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -317,10 +325,11 @@
                                         </div>
                 
                                     </div>
-                                
+                                    
                                     <div class="save-btn">
-                                        <button type="submit"><a href="#"><img src="/images/saveChangeBtn.svg" alt=""></a></button>
-                                        
+                                        <button type="submit">
+                                            <a href="#"><img src="/images/saveChangeBtn.svg" alt="кнопка сохранения">
+                                        </a></button>
                                     </div>
 
                                 </form>

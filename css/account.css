@@ -171,6 +171,10 @@ body {
   color: #000000;
 }
 
+.exist-btn{
+  margin-top: 20px;
+}
+
 .history__box {
   display: flex;
   align-items: center;
