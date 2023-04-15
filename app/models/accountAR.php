@@ -14,6 +14,7 @@ class Account extends basicAR{
     public $password;
     public $height;
     public $weight;
+    public $about;
 
 
 
@@ -58,7 +59,7 @@ class Account extends basicAR{
 
         $this->createConnect();
         
-        $stmt = static::$pdo->prepare("UPDATE `accounts` SET `name`=:name,`birth`=:birth, `goal`=:goal,`problem`=:problem, `height`=:height, `weight`=:weight WHERE id=$this->id");
+        $stmt = static::$pdo->prepare("UPDATE `accounts` SET `name`=:name,`birth`=:birth, `goal`=:goal,`problem`=:problem, `height`=:height, `weight`=:weight, `about`=:about WHERE id=$this->id");
         
         $stmt->bindParam(":name", $this->name);
         $stmt->bindParam(":birth", $this->birth);
@@ -66,6 +67,7 @@ class Account extends basicAR{
         $stmt->bindParam(":problem", $this->problem);
         $stmt->bindParam(":height", $this->height);
         $stmt->bindParam(":weight", $this->weight);
+        $stmt->bindParam(":about", $this->about);
 
         try{
             $stmt->execute();

@@ -67,6 +67,7 @@ class Account_model{
         if (!empty($_POST["personProblem"])) $this->account->problem = $_POST["personProblem"];
         if (!empty($_POST["personHight"])) $this->account->height = $_POST["personHight"];
         if (!empty($_POST["personWeight"])) $this->account->weight = $_POST["personWeight"];
+        if (!empty($_POST["personHistory"])) $this->account->about = $_POST["personHistory"];
 
         $this->account->update();
         $_SESSION["accName"] = $this->getName();
@@ -94,6 +95,10 @@ class Account_model{
 
     function getWeight(){
         return $this->account->weight;
+    }
+
+    function getAbout(){
+        return $this->account->about;
     }
 
 }
