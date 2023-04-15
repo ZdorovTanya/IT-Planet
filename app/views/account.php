@@ -34,7 +34,7 @@
                     <img src="/images/avatar.svg" alt="фото пользователя">
 
                     <div class="about-yourself__row1">
-
+ 
                         <div class="about-yourself__row2">
                             <div class="name _title"><? echo $model->getName() ?></div>
                             <div class="age _info-text">Дата рождения: <? echo $model->getBirth() ?></div>
