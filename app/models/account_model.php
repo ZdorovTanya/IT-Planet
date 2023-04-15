@@ -43,6 +43,16 @@ class Account_model{
 
     }
 
+
+    //выход из аккаунта
+    function logout(){
+
+        unset($this->account);
+        unset($_SESSION["accName"]);
+        unset($_SESSION["accId"]);
+        
+    }
+
     //ищет текущий акк
     function getMyAccount(){
         if (!isset($_SESSION["accId"])) return null;

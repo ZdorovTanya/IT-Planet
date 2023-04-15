@@ -33,4 +33,11 @@ class Account_controller extends Controller{
 
     }
 
+    function logout(){
+        $this->model->logout();
+        
+        header("Location: /main/");
+        exit();
+    }
+
 }

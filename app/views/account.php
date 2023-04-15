@@ -49,9 +49,9 @@
                             </div>
 
                             <div class="exist-btn">
-                                <button type="submit" action="">
-                                    <a href="#"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
-                                </button>
+                                <!-- <button type="submit" action="/account/exit"> -->
+                                    <a href="/account/logout"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
+                                <!-- </button> -->
                             </div>
                         </div>
 
