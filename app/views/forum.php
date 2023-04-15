@@ -20,33 +20,80 @@
 
         <?
             include("app/views/menu.php");
-        ?> 
+        ?>
+
+        <div class="filters">
+            <form action="/forum/" method="post">
+                <input type="checkbox" name="anorexia" id="anorexia" value="anorexia">
+                <label for="anorexia">Анорексия</label>
+                <input type="checkbox" name="bulimia" id="bulimia" value="bulimia">
+                <label for="bulimia">Булимия</label>
+                <input type="checkbox" name="orthorexia" id="orthorexia" value="orthorexia">
+                <label for="orthorexia">Орторексия</label>
+                <input type="checkbox" name="overeating" id="overeating" value="overeating">
+                <label for="overeating">Компульсивное переедание</label>
+                <input type="checkbox" name="other" id="other" value="other" <?= isset($_POST["other"]) ? "checked" : ""?> >
+                <label for="other">Другое</label>
+                <button type="submit">Фильтровать</button>
+            </form>
+        </div>
 
         <section class="forum-articles">
             <div class="container">
                 <div class="forum-articles__body">
 
                     <!-- карточка форума -->
-                    <article class="card">
+                    <?
+                    // $model->findArticleById(1);
+                    // $model->findArticleById(2);
+                    // $count = count($model->getAll())+1;
+
+                        foreach ($model->findAll($_POST) as $article){
+                        // for($i=1; $i<$count; $i++){
+                            ?>
+                                <article class="card">
+                                    <div class="card__wrapper _ortorecsia">
+                                        <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
+                                        <div class="title-filter"><?= $article->subject?></div>
+                                        <div class="main-title"><?= $article->title?></div>
+                                        <div class="card-text">
+                                            <?= $article->text?>
+                                            <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
+                                        </div>
+                                        <div class="avatar-info">
+                                            <img src="/images/Avatar (1).svg" alt="" class="foro">
+                                            <div class="name-date-box">
+                                                <div class="author"><?= $article->author?></div>
+                                                <div class="publication-date"><?= $article->date?></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            <?
+                        }
+                    ?>
+
+                    <!-- <article class="card">
                         <div class="card__wrapper _ortorecsia">
                             <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                            <div class="title-filter">Орторексия</div>
-                            <div class="main-title"><?= $model->getTitle(1)?></div>
+                            <div class="title-filter"> //$model->getSubject(1)?></div>
+                            <div class="main-title"><//$model->getTitle(1)?></div>
                             <div class="card-text">
-                                <?= $model->getText(1)?>
-                                <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
+                                 //$model->getText(1)?>
+                                Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно.
                             </div>
                             <div class="avatar-info">
                                 <img src="/images/Avatar (1).svg" alt="" class="foro">
                                 <div class="name-date-box">
-                                    <div class="author"><?= $model->getAuthor(1)?></div>
-                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                    <div class="author">// $model->getAuthor(1)?></div>
+                                    <div class="publication-date">$model->getDate(1)?></div>
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </article> -->
+
                     <!-- карточка форума -->
-                    <article class="card">
+                    <!-- <article class="card">
                         <div class="card__wrapper _anorecsia">
                             <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
                             <div class="title-filter">Анорексия</div>
@@ -62,9 +109,10 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </article> -->
+
                     <!-- карточка форума -->
-                    <article class="card">
+                    <!-- <article class="card">
                         <div class="card__wrapper _boolimia">
                             <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
                             <div class="title-filter">Булимия</div>
@@ -97,7 +145,7 @@
                                 </div>
                             </div>
                         </div>
-                    </article>
+                    </article> -->
 
                 </div>
             </div>

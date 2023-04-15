@@ -6,13 +6,32 @@ class Forum_model{
 
     private $articles = [];
 
-    function getArticle(){
+    function findAllArticle(){
+        
 
     }
 
     function findArticleById($id){
         $this->articles[] = Article::getArticleById($id);
-        
+    }
+
+
+    function findArticlesByFilters($FiltersArray){
+        if (is_null($FiltersArray)){
+            return;
+        }
+    }
+
+    function findAll($filtersArray){
+        if (empty($filtersArray))
+            $this->articles = Article::getAll();
+        else
+            $this->articles = Article::getBySubjects($filtersArray);
+        return $this->articles;
+    }
+
+    function getSubject($id){
+        return $this->articles[$id-1]->subject;
     }
 
     function getTitle($id){

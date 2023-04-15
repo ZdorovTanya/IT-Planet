@@ -220,3 +220,13 @@
 
     color: #667085;
 }
+
+
+/* for filters by andrew */
+
+.filters{
+  margin-left: 30%;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+}
