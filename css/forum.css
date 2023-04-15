@@ -222,11 +222,36 @@
 }
 
 
-/* for filters by andrew */
+/* very beautiful and comfortable styles by andrew */
 
 .filters{
   margin-left: 30%;
   align-items: center;
   align-content: center;
   margin-top: 100px;
+}
+
+
+.subjform{
+  margin-top: 200px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(109.98deg, #FFFFFF 1.81%, #D7E1DD 98.82%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.subjform label{
+  margin-left: 45%;
+}
+
+.subjform input{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 30%;
+}
+
+.subjform button{
+  display: flex;
+  margin-left: 47%;
 }
