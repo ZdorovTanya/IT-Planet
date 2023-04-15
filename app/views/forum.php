@@ -24,16 +24,22 @@
 
         <div class="filters">
             <form action="/forum/" method="post">
-                <input type="checkbox" name="anorexia" id="anorexia" value="anorexia">
+
+                <input type="checkbox" name="anorexia" id="anorexia" value="Анорексия" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
                 <label for="anorexia">Анорексия</label>
-                <input type="checkbox" name="bulimia" id="bulimia" value="bulimia">
+
+                <input type="checkbox" name="bulimia" id="bulimia" value="Булимия" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
                 <label for="bulimia">Булимия</label>
-                <input type="checkbox" name="orthorexia" id="orthorexia" value="orthorexia">
+
+                <input type="checkbox" name="orthorexia" id="orthorexia" value="Орторексия" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
                 <label for="orthorexia">Орторексия</label>
-                <input type="checkbox" name="overeating" id="overeating" value="overeating">
+
+                <input type="checkbox" name="overeating" id="overeating" value="Компульсивное переедание" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
                 <label for="overeating">Компульсивное переедание</label>
-                <input type="checkbox" name="other" id="other" value="other" <?= isset($_POST["other"]) ? "checked" : ""?> >
+
+                <input type="checkbox" name="other" id="other" value="Другое" <?= isset($_POST["other"]) ? "checked" : ""?> >
                 <label for="other">Другое</label>
+                
                 <button type="submit">Фильтровать</button>
             </form>
         </div>
