@@ -6,10 +6,6 @@ class Forum_model{
 
     private $articles = [];
 
-    function findAllArticle(){
-        
-
-    }
 
     function findArticleById($id){
         $this->articles[] = Article::getArticleById($id);
@@ -28,6 +24,12 @@ class Forum_model{
         else
             $this->articles = Article::getBySubjects($filtersArray);
         return $this->articles;
+    }
+
+    function createNewArticle(){
+
+        $newArticle = new Article($_POST["subject"], $_POST["title"], $_POST["maintext"]);
+        $newArticle->save();
     }
 
     function getSubject($id){
