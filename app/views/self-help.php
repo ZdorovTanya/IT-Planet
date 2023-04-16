@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Самопомощь</title>
 
+    <link rel="stylesheet" href="/css/self-help.css">
+
 
 
     <link rel="stylesheet" href="/css/menu.css">
@@ -21,7 +23,7 @@
         <?
             include("app/views/menu.php");
         ?>
-        
+
     </div>
 </body>
 </html>
