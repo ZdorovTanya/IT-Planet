@@ -18,7 +18,7 @@
                             <a href="" class="menu_link">Консультации</a>
                         </li>
                         <li class="menu_item">
-                            <a href="" class="menu_link">Самопомощь</a>
+                            <a href="/self-help/" class="menu_link">Самопомощь</a>
                         </li>
                         <li class="menu_item">
                             <img src="/images/avtorisation.svg" alt="">
