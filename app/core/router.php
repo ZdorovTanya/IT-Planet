@@ -16,6 +16,7 @@ class Router{
         require_once("app/controllers/".$controller_name.".php");
 
         //создание соотв класса
+        $controller_name = str_replace("-", "", $controller_name);
         $controller_name = ucfirst($controller_name);
         $controller = new $controller_name;
 
