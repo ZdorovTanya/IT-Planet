@@ -11,6 +11,7 @@ class Article extends basicAR{
     public $text;
     public $date;
     public $author;
+    public $authorId;
 
 
     //конструктор ??пераметры??
@@ -58,7 +59,7 @@ class Article extends basicAR{
         while($subj = $stmt2->fetch())
             $obj->subject[] = $subj;
 
-        $obj->author = Account::findNameById($obj->author);
+        $obj->author = Account::findNameById($obj->authorId);
 
         return $obj;
 
@@ -149,6 +150,10 @@ class Article extends basicAR{
 
     function getAuthor(){
         return $this->author;
+    }
+
+    function getAuthorId(){
+        return $this->authorId;
     }
 
     function getDate(){
