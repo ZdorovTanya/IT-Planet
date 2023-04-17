@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="/css/menu.css">
     <!-- <link rel="stylesheet" href="/css/popup.css"> -->
 
-
+    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
 
         <?
             include("app/views/menu.php");
@@ -333,7 +333,7 @@
                                         </a></button>
                                     </div>
 
-                                    <div class="about-yourself__my-biograpy">
+                                    <div class="about-yourself__my-biograpy1">
                                         <div class="about__box">
                                             <div class="about-me">О себе:</div>
                                         </div>

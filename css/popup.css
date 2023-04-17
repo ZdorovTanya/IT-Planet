@@ -129,9 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 .popup__middle {
 
   padding: 20px 10px 10px 10px;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+
   height: 169px;
   background: linear-gradient(109.98deg, #FFFFFF 1.81%, #D7E1DD 98.82%);
   border: 1px solid rgba(0, 0, 0, 0.06);

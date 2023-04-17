@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/menu.css">
     <!-- <link rel="stylesheet" href="/css/popup.css">-->
 
-    <link type="image/x-icon" href="/images/">
+    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@
                                     <p>В разделе “Форум” Вы сможете познакомится с историями других пользователей по теме, которая интересует лично 
                                         Вас с помощью гибкой системы фильтров.
                                     </p>  
-                                    <p>
+                                    <p> 
                                         С помощью аккаунта, Вы сможете рассказывать на форуме о своем личном опыте, 
                                         оставлять комментарии, получать  поддержку, не только
                                         от других пользователей, но и от психологов, которые также могут принимать участие в проекте.

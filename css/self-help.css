@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active {
+    outline: none;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
+  html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  input, button, textarea{
+    font-family: inherit;
+  }
+  
+  input::-ms-clear{
+    display:none;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  button::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+  }
+  
+  a, a:visited{
+    text-decoration:none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  
+  ul li{
+    list-style: none;
+  }
+  
+  img{
+    vertical-align: top;
+  }
+  
+  h1, h2,h3, h4, h5, h6{
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  /* ------------------------------------------------------------------------------------- */
+  
+  /*Убрать полосу прокрутки для всей страницы*/
+  ::-webkit-scrollbar {
+    width: 0;
+  } 
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  ._container{ 
+    max-width: 1366px;
+    margin: 0px auto;
+  }
+
+  ._title {
+    margin: 30px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 42px;
+    color: #396857;
+
+}
+._text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #000000;
+    width: 818px;
+    margin: 30px;
+}
+
+._box{
+    background: #DAE2EB;
+    border: 2px solid #396857;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 1198px;
+}
+
+.about-page{
+    position: relative;
+    margin-top: 208px;
+    height: 313px;
+}
+
+.girlWaterYourself {
+    position: absolute;
+    left: 920px;
+    top: -160.51px;
+}
+
+.useful-sources {
+    height: 629px;
+
+    margin-top: 50px;
+}
+ .video__row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+ }
+
+ .useful-sources-telegram{
+    margin-top: 50px;
+ }
+ .tg__row{
+    margin: 20px;
+ }
+ .task {
+  margin-top: 50px;
+}
+
+.taskHelp-row{
+  border: 2px solid #396857;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  width: 1138px;
+  height: 100px;
+
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+
+  position: relative;
+  cursor: pointer;
+}
+._task-title{
+  font-size: 20px;
+  line-height: 26px;
+  color: #396857;
+  margin-left: 50px;
+  
+}
+.arrow{
+  position: absolute;
+  left: 95.61%;
+  right: 1.76%;
+  top: 35%;
+  bottom: 65%;
+}
+
+.task-block_text {
+  display: none;
+  padding: 10px 0px 0px 0px;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+
+  background-color: #ffffff;
+  border: 2px solid #396857;
+  border-radius: 30px;
+  
+  padding: 20px;
+  width: 1138px;
+
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+p{
+  text-indent: 10px;
+}
