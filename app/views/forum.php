@@ -25,19 +25,19 @@
         <div class="filters">
             <form action="/forum/" method="post">
 
-                <input type="checkbox" name="anorexia" id="anorexia" value="Анорексия" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
+                <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
                 <label for="anorexia">Анорексия</label>
 
-                <input type="checkbox" name="bulimia" id="bulimia" value="Булимия" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
+                <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
                 <label for="bulimia">Булимия</label>
 
-                <input type="checkbox" name="orthorexia" id="orthorexia" value="Орторексия" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
+                <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
                 <label for="orthorexia">Орторексия</label>
 
-                <input type="checkbox" name="overeating" id="overeating" value="Компульсивное переедание" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
+                <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
                 <label for="overeating">Компульсивное переедание</label>
 
-                <input type="checkbox" name="other" id="other" value="Другое" <?= isset($_POST["other"]) ? "checked" : ""?> >
+                <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
                 <label for="other">Другое</label>
 
                 <button type="submit">Фильтровать</button>
@@ -55,24 +55,23 @@
                     // $model->findArticleById(1);
                     // $model->findArticleById(2);
                     // $count = count($model->getAll())+1;
+                        // for($i=1; $i<$count; $i++){
 
                         foreach ($model->findAll($_POST) as $article){
-                        // for($i=1; $i<$count; $i++){
                             ?>
                                 <article class="card">
                                     <div class="card__wrapper _ortorecsia">
                                         <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                                        <div class="title-filter"><?= $article->subject?></div>
-                                        <div class="main-title"><?= $article->title?></div>
+                                        <div class="title-filter"><?= $article->getSubjects()?></div>
+                                        <div class="main-title"><?= $article->getTitle()?></div>
                                         <div class="card-text">
-                                            <?= $article->text?>
-                                            <!-- Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно. -->
+                                            <?= $article->getText()?>
                                         </div>
                                         <div class="avatar-info">
                                             <img src="/images/Avatar (1).svg" alt="" class="foro">
                                             <div class="name-date-box">
-                                                <div class="author"><?= $article->author?></div>
-                                                <div class="publication-date"><?= $article->date?></div>
+                                                <div class="author"><?= $article->getAuthor()?></div>
+                                                <div class="publication-date"><?= $article->getDate()?></div>
                                             </div>
                                         </div>
                                     </div>
@@ -81,24 +80,7 @@
                         }
                     ?>
 
-                    <!-- <article class="card">
-                        <div class="card__wrapper _ortorecsia">
-                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                            <div class="title-filter"> //$model->getSubject(1)?></div>
-                            <div class="main-title"><//$model->getTitle(1)?></div>
-                            <div class="card-text">
-                                 //$model->getText(1)?>
-                                Тут отобржен текст статьи, который Вы сможете развернуть и прочитать ее целиком, но серенький потому что его как бы хуже видно.
-                            </div>
-                            <div class="avatar-info">
-                                <img src="/images/Avatar (1).svg" alt="" class="foro">
-                                <div class="name-date-box">
-                                    <div class="author">// $model->getAuthor(1)?></div>
-                                    <div class="publication-date">$model->getDate(1)?></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article> -->
+                   
 
                     <!-- карточка форума -->
                     <!-- <article class="card">
@@ -112,44 +94,8 @@
                             <div class="avatar-info">
                                 <img src="/images/Avatar (1).svg" alt="" class="foro">
                                 <div class="name-date-box">
-                                    <div class="author"><?= $model->getAuthor(1)?></div>
-                                    <div class="publication-date"><?= $model->getDate(1)?></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article> -->
-
-                    <!-- карточка форума -->
-                    <!-- <article class="card">
-                        <div class="card__wrapper _boolimia">
-                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                            <div class="title-filter">Булимия</div>
-                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
-                            <div class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
-                            </div>
-                            <div class="avatar-info">
-                                <img src="/images/Avatar (1).svg" alt="" class="foro">
-                                <div class="name-date-box">
-                                    <div class="author"><?= $model->getAuthor(1)?></div>
-                                    <div class="publication-date"><?= $model->getDate(1)?></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card__wrapper _compulsia">
-                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                            <div class="title-filter">Компульсивные переедания</div>
-                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
-                            <div class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
-                            </div>
-                            <div class="avatar-info">
-                                <img src="/images/Avatar (1).svg" alt="" class="foro">
-                                <div class="name-date-box">
-                                    <div class="author"><?= $model->getAuthor(1)?></div>
-                                    <div class="publication-date"><?= $model->getDate(1)?></div>
+                                    <div class="author">Loren</div>
+                                    <div class="publication-date">2022-10-10</div>
                                 </div>
                             </div>
                         </div>

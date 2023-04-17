@@ -13,33 +13,15 @@ class Article extends basicAR{
     public $author;
 
 
+    //конструктор ??пераметры??
     function __construct($subject = null, $title = null, $text = null){
         $this->subject = $subject;
         $this->title = $title;
         $this->text = $text;
     }
 
-    static function getArticleById($id){
 
-        static::createConnect();
-
-        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `id`=:id");
-        $stmt->bindParam("id", $id);
-
-        $stmt->execute();
-        $stmt = $stmt->fetch();
-
-        $obj = new Article();
-
-        foreach ($obj as $key=>$value)
-            $obj->$key = $stmt[$key];
-        
-        $obj->author = Account::findNameById($obj->author);
-
-        return $obj;
-
-    }
-
+    //получение всех статей
     static function getAll(){
 
         static::createConnect();
@@ -50,27 +32,42 @@ class Article extends basicAR{
         $objs = [];
 
         while ($res = $stmt->fetch()){
-
-            $obj = new Article();
-
-            foreach ($obj as $key=>$value)
-                $obj->$key = $res[$key];
-
-            $obj->author = Account::findNameById($obj->author);
-
-            $objs[] = $obj;
+            $objs[] = static::ceateArticle($res);
         }
 
         return $objs;
     }
 
+
+    //создание объекта из данных
+    static private function ceateArticle($data){
+
+        $obj = new Article();
+
+        foreach ($obj as $key=>$value){
+            $obj->$key = $data[$key] ?? null;
+        }
+    
+        $stmt2 = static::$pdo->prepare("SELECT `name` FROM `types_disorder` WHERE `id` IN (SELECT `id_type` FROM `articles_types_dis` WHERE `id_article`=:id)");
+        $stmt2->bindParam("id", $obj->id);
+        $stmt2->execute();
+
+        while($subj = $stmt2->fetch())
+            $obj->subject[] = $subj;
+
+        $obj->author = Account::findNameById($obj->author);
+
+        return $obj;
+
+    }
+
+    
+    //поиск статей по фильтрам тем
     static function getBySubjects($subjArr){
         
         static::createConnect();
 
-        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `subject`=:subj0 OR `subject`=:subj1 OR `subject`=:subj2 OR `subject`=:subj3 OR `subject`=:subj4");
-
-        //не названия а числа-ссылки (ключи) на другую, новую таблицу, точно
+        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `id` IN (SELECT `id_article` FROM `articles_types_dis` WHERE `id_type`=:subj0 OR `id_type`=:subj1 OR `id_type`=:subj2 OR `id_type`=:subj3 OR `id_type`=:subj4)");
 
         $stmt->bindParam("subj0", $subjArr["anorexia"]);
         $stmt->bindParam("subj1", $subjArr["bulimia"]);
@@ -82,34 +79,63 @@ class Article extends basicAR{
         $objs = [];
 
         while ($res = $stmt->fetch()){
-
-            $obj = new Article();
-
-            foreach ($obj as $key=>$value)
-                $obj->$key = $res[$key];
-
-            $obj->author = Account::findNameById($obj->author);
-
-            $objs[] = $obj;
+            $objs[] = static::ceateArticle($res);
         }
 
         return $objs;
     }
 
+
+    //сохранение объекта в бд
     function save(){
         static::createConnect();
 
-        $stmt = static::$pdo->prepare("INSERT INTO `articles`(`id`, `subject`, `title`, `text`, `date`, `author`) VALUES (NULL, :subject, :title, :text, CURRENT_TIMESTAMP, :authorId)");
+        $stmt = static::$pdo->prepare("INSERT INTO `articles`(`id`, `title`, `text`, `date`, `author`) VALUES (NULL, :title, :text, CURRENT_TIMESTAMP, :authorId)");
 
         $authorId = $_SESSION["accId"] ?? null;
         
-        $stmt->bindParam("subject", $this->subject);
         $stmt->bindParam("title", $this->title);
         $stmt->bindParam("text", $this->text);
         $stmt->bindParam("authorId", $authorId);
 
         $stmt->execute();
+        $this->id = static::$pdo->lastInsertId();
 
+        $stmt2 = static::$pdo->prepare("INSERT INTO `articles_types_dis` (`id`, `id_article`, `id_type`) VALUES (NULL, :article, :type)");
+
+        foreach($this->subject as $subj){
+            $stmt2->bindParam("article", $this->id);
+            $stmt2->bindParam("type", $subj);
+            $stmt2->execute();
+        }         
+
+    }
+
+
+    //геттеры
+
+    function getSubjects(){
+        $res = "";
+        foreach($this->subject as $subj)
+            $res .= $subj["name"]." ";
+
+        return $res;
+    }
+
+    function getTitle(){
+        return $this->title;
+    }
+
+    function getText(){
+        return $this->text;
+    }
+
+    function getAuthor(){
+        return $this->author;
+    }
+
+    function getDate(){
+        return $this->date;
     }
 
 

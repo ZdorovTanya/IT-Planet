@@ -26,8 +26,21 @@
 
             <form action="/forum/saveSubj" method="post">
 
-                <label for="subject">Тема</label>
-                <input type="text" name="subject" id="subject">
+                <label for="subject1">Анорексия</label>
+                <input type="checkbox" name="subjects[]" id="subject1" value="1">
+
+                <label for="subject2">Булимия</label>
+                <input type="checkbox" name="subjects[]" id="subject2" value="2">
+                
+                <label for="subject3">Оторексия</label>
+                <input type="checkbox" name="subjects[]" id="subject3" value="3">
+                
+                <label for="subject4">Компульсивное переедание</label>
+                <input type="checkbox" name="subjects[]" id="subject4" value="4">
+                
+                <label for="subject5">Другое</label>
+                <input type="checkbox" name="subjects[]" id="subject5" value="5">
+
 
                 <label for="title">Название</label>
                 <input type="text" name="title" id="title">

@@ -7,17 +7,7 @@ class Forum_model{
     private $articles = [];
 
 
-    function findArticleById($id){
-        $this->articles[] = Article::getArticleById($id);
-    }
-
-
-    function findArticlesByFilters($FiltersArray){
-        if (is_null($FiltersArray)){
-            return;
-        }
-    }
-
+    //поиск всех записей, с учетом фильтров (если он есть)
     function findAll($filtersArray){
         if (empty($filtersArray))
             $this->articles = Article::getAll();
@@ -26,29 +16,12 @@ class Forum_model{
         return $this->articles;
     }
 
+
+    //создание новой записи
     function createNewArticle(){
 
-        $newArticle = new Article($_POST["subject"], $_POST["title"], $_POST["maintext"]);
+        $newArticle = new Article($_POST["subjects"], $_POST["title"], $_POST["maintext"]);
         $newArticle->save();
     }
 
-    function getSubject($id){
-        return $this->articles[$id-1]->subject;
-    }
-
-    function getTitle($id){
-        return $this->articles[$id-1]->title;
-    }
-
-    function getText($id){
-        return $this->articles[$id-1]->text;
-    }
-
-    function getDate($id){
-        return $this->articles[$id-1]->date;
-    }
-
-    function getAuthor($id){
-        return $this->articles[$id-1]->author;
-    }
 }
