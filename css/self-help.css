@@ -165,6 +165,7 @@
   padding-left: 30px;
 
   position: relative;
+  cursor: pointer;
 }
 ._task-title{
   font-size: 20px;
@@ -181,3 +182,25 @@
   bottom: 65%;
 }
 
+.task-block_text {
+  display: none;
+  padding: 10px 0px 0px 0px;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+
+  background-color: #ffffff;
+  border: 2px solid #396857;
+  border-radius: 30px;
+  
+  padding: 20px;
+  width: 1138px;
+
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+p{
+  text-indent: 10px;
+}

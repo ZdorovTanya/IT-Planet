@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -83,6 +85,19 @@
                 </div>
                 <img src="/images/ArrowDown.svg" alt="" class="arrow">
             </div>
+            <div class="task-block_text"> 
+                <p>
+                    Положите перед собой блокнот и постарайтесь подробно прописать все негативные моменты, 
+                    с которыми вы сталкиваетесь из-за РПП. 
+                </p>
+                <p>
+                    Это может быть неприятие своего тела, буллинг со стороны знакомых и родных или проблемы, связанные с употреблением пищи.
+                </p>
+                <p>
+                    Не романтизируйте РПП, чем больше плохого Вы вспомните, тем лучше.
+                </p>
+                                    
+            </div>
 
             <div class="taskHelp-row">
                 <img src="/images/writeTask.svg" alt="напишите задание">
@@ -90,6 +105,21 @@
                     Задание 2: Вспомните какие отношения с едой были в Вашем детстве.
                 </div>
                 <img src="/images/ArrowDown.svg" alt="" class="arrow">
+            </div>
+
+            <div class="task-block_text"> 
+                <p>
+                    Вспомните какая еда у Вас была любимой в детсве, а какую вы на дух не переносили, есть ли у вас ритуалы, связанные с едой и семейные привычки?
+                </p>
+                <p>
+                    Если в Вашей семье были запреты на еду, распространялись ли они на Ваши любимые продукты? Приходилось ли Вам прятать любимую еду?
+                </p>
+                <p>
+                    Возможно Вам приходилось слышать подобные фразы в детстве?
+                </p>
+                        <p>- Пока не доешь, никуда не пойдешь / сладкое только после еды</p> 
+                        <p>- Не плачь деточка, держи конфетку, поешь </p>
+           
             </div>
 
             <div class="taskHelp-row">
@@ -187,8 +217,16 @@
                 </div>
                 <img src="/images/ArrowDown.svg" alt="" class="arrow">
             </div>
+            <div class="task-block_text"> 
+                <p>
+                    
+                </p>
+                                    
+            </div>
+            
         </div>
 
     </div>
+<script src="/js/taskSpoiler.js"></script>
 </body>
 </html>
