@@ -56,7 +56,7 @@
 
         <div class="useful-sources-telegram _container _box">
             <div class="useful-sources__title _title">
-                Полезные телеграм канала
+                Полезные телеграмм каналы
             </div>
             <div class="useful-sources__text _text">
                 В данном блоке мы собрали для Вас телеграм каналы, которые могут быть полезны в восстановлении от РПП.

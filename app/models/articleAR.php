@@ -118,7 +118,7 @@ class Article extends basicAR{
 
     static function getArticleByAccount($accId){
 
-        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `author`=:accid");
+        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `authorId`=:accid");
         $stmt->bindParam("accid", $accId);
         $stmt->execute();
 
