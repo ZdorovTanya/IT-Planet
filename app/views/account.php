@@ -123,31 +123,37 @@
                 </div>
 
                 <div class="article-box">
+                    <?
+                    foreach($model->articles as $articles){
+                        ?>
 
-                    <div class="article-item">
-                        <div class="article-row-1">
-                            <div class="article-name">Мои попытки избавиться от РПП</div>
-                            <div class="article-hashtag">
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Анорексия</div>
+                        <div class="article-item">
+                            <div class="article-row-1">
+                                <div class="article-name"><?= $articles->getTitle()?></div>
+                                <div class="article-hashtag">
+                                    <?=$articles->getSubjects()?>
+                                    <!-- <div class="hashtag-item">
+                                        <div class="hashtag-name"> #Анорексия</div>
+                                    </div>
+                                    <div class="hashtag-item">
+                                        <div class="hashtag-name"> #Начало</div>
+                                    </div>
+                                    <div class="hashtag-item">
+                                        <div class="hashtag-name"> #Борьба</div>
+                                    </div> -->
                                 </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Начало</div>
-                                </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Борьба</div>
+                            </div>
+                            <div class="article-row-2">
+                                <div class="article-content">
+                                    <?= substr($articles->getText(), 0, 150)."..."?>
+                                    <!-- Я много раз начинала бороться в РПП, но всякий раз, когда видела привес на весах 
+                                    бросала это занятие и снова садилась на диету. -->
                                 </div>
                             </div>
                         </div>
-                        <div class="article-row-2">
-                            <div class="article-content">
-                                Я много раз начинала бороться в РПП, но всякий раз, когда видела привес на весах 
-                                бросала это занятие и снова садилась на диету.
-                            </div>
-                        </div>
-                    </div>
+                    <?}?>
 
-                    <div class="article-item">
+                    <!-- <div class="article-item">
                         <div class="article-row-1">
                             <div class="article-name">Первый поход к психологу</div>
                             <div class="article-hashtag">
@@ -168,9 +174,9 @@
                                 над своим телом.
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="article-item">
+                    <!-- <div class="article-item">
                         <div class="article-row-1">
                             <div class="article-name">Набор веса</div>
                             <div class="article-hashtag">
@@ -191,7 +197,7 @@
                                я протяну не долго, но отражение в зеркале  мне было важнее.
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 

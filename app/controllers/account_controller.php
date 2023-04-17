@@ -19,6 +19,8 @@ class Account_controller extends Controller{
 
     function defaultPage(){
 
+        $this->model->findArticleByAccount($this->model->getId());
+
         $this->view->render("account.php", $this->model);
     }
 

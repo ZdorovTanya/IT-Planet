@@ -4,6 +4,7 @@ require_once("app/models/accountAR.php");
 
 class Account_model{
     static public $account;
+    public $articles;
 
 
     //регистрация нового пользователя
@@ -71,6 +72,13 @@ class Account_model{
 
         $this->account->update();
         $_SESSION["accName"] = $this->getName();
+    }
+
+
+    function findArticleByAccount($accId){
+
+        require_once("app/models/articleAR.php");
+        $this->articles = Article::getArticleByAccount($accId);
     }
 
     function getId(){

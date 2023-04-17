@@ -42,6 +42,9 @@ class Article extends basicAR{
     //создание объекта из данных
     static private function ceateArticle($data){
 
+        if (is_null($data))
+            return null;
+
         $obj = new Article();
 
         foreach ($obj as $key=>$value){
@@ -109,6 +112,20 @@ class Article extends basicAR{
             $stmt2->execute();
         }         
 
+    }
+
+
+    static function getArticleByAccount($accId){
+
+        $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `author`=:accid");
+        $stmt->bindParam("accid", $accId);
+        $stmt->execute();
+
+        $objs = [];
+        for($i=0; $i<3; $i++)
+            $objs[] = static::ceateArticle($stmt->fetch() ?? null);
+
+        return $objs;
     }
 
 
