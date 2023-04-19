@@ -54,11 +54,13 @@ class Account_controller extends Controller{
     }
 
     function setSubscribe(){
-        $this->model->setSubscribe($_POST["subs"]);
-        // $this->showId($_POST["subs"]);
+
+        if ($this->model->checkSubscribe($_POST["subs"]))
+            $this->model->delSubscribe($_POST["subs"]);
+        else
+            $this->model->setSubscribe($_POST["subs"]);
+        
         header("Location: /account/".$_POST["subs"]);
-        // $this->model->getMyAccount();
-        // $this->view->render("account.php", $this->model);
 
     }
 
