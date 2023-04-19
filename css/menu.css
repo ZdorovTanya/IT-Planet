@@ -1,139 +1,40 @@
-*{
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*, *:before, *:after{
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
-
-html, body{
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea{
-  font-family: inherit;
-}
-
-input::-ms-clear{
-  display:none;
-}
-
-button{
-  cursor: pointer;
-}
-button::-moz-focus-inner{
-  padding: 0;
-  border: 0;
-}
-
-a, a:visited{
-  text-decoration:none;
-}
-a:hover{
-  text-decoration: none;
-}
-
-ul li{
-  list-style: none;
-}
-
-img{
-  vertical-align: top;
-}
-
-h1, h2,h3, h4, h5, h6{
-  font-size: inherit;
-  font-weight: inherit;
-}
-/* ------------------------------------------------------------------------------------- */
-
-/*Убрать полосу прокрутки для всей страницы*/
-::-webkit-scrollbar {
-  width: 0;
-} 
-
-html {
-  scroll-behavior: smooth;
-}
-
-body{
-  height: 100%;
-  font-family: 'Roboto Mono', monospace;
-}
-
-/* .wrapper{
-  min-height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-._container{ 
-  max-width: 1366px;
-  margin: 0px auto;
-} */
-
-
-/* scss */
 .header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2000;
 }
 
 .header_container {
-  min-height: 80px;
-  align-items: center;
-  background-color: rgb(176, 195, 188);
-  border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px 30px 30px;
+    background-color: #b0c3bc;
 }
 
 .menu_list {
-  display: flex;
-}
-
-.menu_item {
-  margin: 30px auto;
-}
-
-.menu_item:hover {
-  background: #FFF27D;
-  border-radius: 30px;
-}
-
-.menu_item img {
-  height: 25px;
-  color: initial;
+    min-height: 86px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
 .menu_link {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 26px;
-  color: #000000;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .65em 1em;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #396857;
+    border-radius: 30px;
 }
-
-.menu_item:last-of-type img {
-  padding-left: 10px;
-}/*# sourceMappingURL=menu.css.map */
+.menu_link:hover {
+    background: #fff27d;
+    border-radius: 30px;
+}
+.menu_link:has(img) > img {
+    height: 26px;
+}

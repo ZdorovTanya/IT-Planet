@@ -21,15 +21,15 @@
                             <a href="/self-help/" class="menu_link">Самопомощь</a>
                         </li>
                         <li class="menu_item">
-                            <img src="/images/avtorisation.svg" alt="">
+                            <!-- <img src="/images/avtorisation.svg" alt=""> -->
 
                             <?
                                 $name = $_SESSION["accName"] ?? null;
 
                                 if (!isset($name))
-                                    echo '<a href="/registration/" class="menu_link">Авторизация</a>';
+                                    echo '<a href="/registration/" class="menu_link"><img src="/images/avtorisation.svg" alt="">Авторизация</a>';
                                 else 
-                                    echo '<a href="/account/" class="menu_link">'.$name."</a>";
+                                    echo '<a href="/account/" class="menu_link"><img src="/images/avtorisation.svg" alt="">'.$name.'</a>';
                             ?>
 
                         </li>

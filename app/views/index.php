@@ -8,7 +8,6 @@
     <title>eat.NORMAL</title>
 
     <link rel="stylesheet" href="/css/style.css">
-    
     <link rel="stylesheet" href="/css/menu.css">
     <!-- <link rel="stylesheet" href="/css/popup.css">-->
 
