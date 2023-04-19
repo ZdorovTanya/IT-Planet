@@ -103,7 +103,7 @@
                 <?
                     $mySubs = $model->getSubscribes($model->getId());
                     if (count($mySubs) > 4) $mySubs = array_slice($mySubs, 0, 4);
-                    
+
                     foreach($mySubs as $subs){
                     ?>
                         <div class="subscriptions-item">
