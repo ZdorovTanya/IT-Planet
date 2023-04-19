@@ -19,13 +19,8 @@ a:focus, a:active {
 
 html, body {
   height: 100%;
-  width: 100%;
-  font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 input, button, textarea {
@@ -38,11 +33,6 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
 }
 
 a, a:visited {
@@ -68,16 +58,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------------------------------------------------------------*/
 /*Убрать полосу прокрутки для всей страницы*/
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0;
-}
+} */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
   font-family: "Roboto Mono", monospace;
 }
 
@@ -134,7 +123,6 @@ body {
 
 .project-btn_text {
   margin-left: 10px;
-  font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 32px;
