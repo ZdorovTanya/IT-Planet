@@ -71,7 +71,7 @@ class Account extends basicAR{
 
         try{
             $stmt->execute();
-        } catch (PDOException){};
+        } catch (PDOException ){};
     }
 
 
@@ -138,7 +138,6 @@ class Account extends basicAR{
         foreach ($obj as $key=>$value)
             $obj->$key = $stmt[$key];
 
-            // echo "stmt ".json_encode($obj)."\n";
         return $obj;
     }
 }
