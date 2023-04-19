@@ -61,6 +61,11 @@ class Account_model{
     }
 
 
+    function getAccountById($accId){
+        $this->account = Account::findById($accId);
+    }
+
+
     function updateAccount(){
 
         if (!empty($_POST["personFIO"])) $this->account->name = $_POST["personFIO"];
@@ -79,6 +84,12 @@ class Account_model{
 
         require_once("app/models/articleAR.php");
         $this->articles = Article::getArticleByAccount($accId);
+    }
+
+
+    function setSubscribe($id){
+        require_once("app/models/subscribeAR.php");
+        Subscribe::addSubscribe($id, $this->getId());
     }
 
     function getId(){

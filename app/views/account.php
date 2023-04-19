@@ -45,14 +45,23 @@
                        
                         <div class="btn-box">
                             <div class="registration-btn">
-                                <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
+                                <?
+                                    if ($model->getId() == $_SESSION["accId"]){?>
+                                        <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
+                                        <div class="exist-btn">
+                                            <!-- <button type="submit" action="/account/exit"> -->
+                                                <a href="/account/logout"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
+                                            <!-- </button> -->
+                                        </div>
+                                    <?}
+                                    else{?>
+                                        <form action="setSubscribe" method="POST">
+                                            <input type="hidden" name="subs" value="<?=$model->getId()?>">
+                                            <button><img src="/images/btnSubscribe.svg" alt=""></button>
+                                        </form>
+                                    <?}?>
                             </div>
 
-                            <div class="exist-btn">
-                                <!-- <button type="submit" action="/account/exit"> -->
-                                    <a href="/account/logout"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
-                                <!-- </button> -->
-                            </div>
                         </div>
 
                     </div>
@@ -120,6 +129,7 @@
 
                 <div class="article-box">
                     <?
+                    if (!is_null($model->articles))
                     foreach($model->articles as $articles){
                         ?>
 

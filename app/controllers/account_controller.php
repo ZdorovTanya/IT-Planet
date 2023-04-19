@@ -42,4 +42,24 @@ class Account_controller extends Controller{
         exit();
     }
 
+
+    function showId($id){
+        if ($_SESSION["accId"] == $id){
+            $this->defaultPage();
+            return;
+        }
+
+        $this->model->getAccountById($id);
+        $this->view->render("account.php", $this->model);
+    }
+
+    function setSubscribe(){
+        $this->model->setSubscribe($_POST["subs"]);
+        // $this->showId($_POST["subs"]);
+        header("Location: /account/".$_POST["subs"]);
+        // $this->model->getMyAccount();
+        // $this->view->render("account.php", $this->model);
+
+    }
+
 }
