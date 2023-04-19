@@ -13,36 +13,34 @@
 <body>
     <div class="wrapper">
 
-        <?
-            include("app/views/menu.php");
-        ?>
+        <? include("app/views/menu.php"); ?>
 
         <div class="filters">
             <form action="/forum/" method="post" style="display: flex; gap: 2rem;">
 
                 <div>
-                    <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
                     <label for="anorexia">Анорексия</label>
+                    <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
                 </div>
 
                 <div>
-                    <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
                     <label for="bulimia">Булимия</label>
+                    <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
                 </div>
 
                 <div>
-                    <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
                     <label for="orthorexia">Орторексия</label>
+                    <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
                 </div>
 
                 <div>
-                    <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
                     <label for="overeating">Компульсивное переедание</label>
+                    <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
                 </div>
 
                 <div>
-                    <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
                     <label for="other">Другое</label>
+                    <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
                 </div>
 
                 <button type="submit">Фильтровать</button>
@@ -67,7 +65,7 @@
                                 <article class="card">
                                     <div class="card__wrapper _ortorecsia">
                                         <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                                        <div class="title-filter"><?= $article->getStringSubjects()?></div>
+                                        <div class="title-filter"><?= $article->getStringSubjects() ?></div>
                                         <div class="main-title"><?= $article->getTitle()?></div>
                                         <div class="card-text">
                                             <?= $article->getText()?>

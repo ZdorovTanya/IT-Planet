@@ -16,11 +16,6 @@
     gap: 3rem 1.5rem;
 }
 
-.container {
-    max-width: 1232px;
-    margin-inline: auto;
-    padding: 0 1rem;
-}
 .card__wrapper {
     display: flex;
     flex-direction: column;
@@ -50,8 +45,11 @@
 .state-picture {
     margin-bottom: 2rem;
 }
+
 .title-filter {
-    font-style: normal;
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.5;
