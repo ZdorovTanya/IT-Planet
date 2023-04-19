@@ -47,18 +47,26 @@
                             <div class="registration-btn">
                                 <?
                                     if ($model->getId() == $_SESSION["accId"]){?>
+                                    <!-- свой акк. вывод кнопки редактирования  -->
                                         <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
                                         <div class="exist-btn">
-                                            <!-- <button type="submit" action="/account/exit"> -->
-                                                <a href="/account/logout"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
-                                            <!-- </button> -->
+                                            <a href="/account/logout"><img src="/images/existBtn.svg" alt="кнопка выхода"></a>
                                         </div>
                                     <?}
-                                    else{?>
-                                        <form action="setSubscribe" method="POST">
-                                            <input type="hidden" name="subs" value="<?=$model->getId()?>">
-                                            <button><img src="/images/btnSubscribe.svg" alt=""></button>
-                                        </form>
+                                    else{
+                                        if ($model->checkSubscribe($model->getId())){?>
+                                            <!-- отписаться -->
+                                                <form action="setSubscribe" method="POST">
+                                                    <input ot type="hidden" name="subs" value="<?=$model->getId()?>">
+                                                    <button><img src="/images/btnUnsubscribe.svg" alt=""></button>
+                                                </form>
+                                        <?} else{?>
+                                            <!-- подписаться -->
+                                            <form action="setSubscribe" method="POST">
+                                                <input pod type="hidden" name="subs" value="<?=$model->getId()?>">
+                                                <button><img src="/images/btnSubscribe.svg" alt=""></button>
+                                            </form>
+                                        <?}?>
                                     <?}?>
                             </div>
 

@@ -92,6 +92,17 @@ class Account_model{
         Subscribe::addSubscribe($id, $this->getId());
     }
 
+    function delSubscribe($id){
+        require_once("app/models/subscribeAR.php");
+        Subscribe::delSubscribe($id, $this->getId());
+    }
+
+    function checkSubscribe($author_id, $follower_id = null){
+        $follower_id = $follower_id ?? $_SESSION["accId"];
+        require_once("app/models/subscribeAR.php");
+        return Subscribe::checkSubscribe($author_id, $follower_id);
+    }
+
     function getId(){
         return $this->account->id;
     }
