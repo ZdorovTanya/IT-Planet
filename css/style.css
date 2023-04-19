@@ -1,206 +1,195 @@
 @charset "UTF-8";
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
+body * {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none; 
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
+body *, body *::before, body *::after {
+    box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
-  line-height: 1;
-  font-size: 14px;
+    height: 100%;
 }
 
 input, button, textarea {
-  font-family: inherit;
+    font-family: inherit;
 }
 
-input::-ms-clear {
-  display: none;
+button, select {
+    cursor: pointer;
 }
 
-button {
-  cursor: pointer;
+a  {
+    text-decoration: none;
 }
 
-a, a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
+ul, ol, li {
+    list-style: none;
 }
 
 img {
-  vertical-align: top;
+    display: block; /* все картинки делать блоками! */
+    max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /*----------------------------------------------------------------*/
-/*Убрать полосу прокрутки для всей страницы*/
-/* ::-webkit-scrollbar {
-  width: 0;
-} */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Roboto Mono", monospace;
+    height: 100%;
 }
 
-body {
-  font-family: "Roboto Mono", monospace;
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary-color);
 }
 
 .wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+._container {
+    max-width: 1366px;
+    margin: 0 auto;
 }
 
-._container {
-  max-width: 1366px;
-  margin: 0px auto;
+
+
+/* Здесь объявляются CSS-переменные с глобальной областью видимости */
+/* :root дублирует корневой элемент html, но специфичность выше */
+:root {
+    --primary-color: #396857;
 }
+
+
  
 .content {
-  flex: 1 1 auto;
-  position: relative;
-  padding-bottom: 200px;
+    padding: 200px 0;
 }
-
 .content_row {
-  display: flex;
-  margin-top: 200px;
+    margin-left: auto;
+    width: 50%;
 }
 
-.content_column_1 {
-  width: 50%;
-}
-
-.content_column_2 {
-  width: 50%;
-}
 
 ._text {
-  font-style: normal;
-  font-weight: 100;
-  font-size: 20px;
-  line-height: 26px;
+    font-weight: 200; /* 100 слишком тонкий */
+    font-size: 20px;
+    line-height: 1.4;
 }
-
-.project-btn {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.project-btn_row {
-  display: flex;
-  width: 200px;
-  justify-content: center;
-  border: 1px solid #396857;
-  border-radius: 20px;
-}
-
-.project-btn_text {
-  margin-left: 10px;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 32px;
-  color: #396857;
-}
-
-#block2 {
-  scroll-margin-top: 120px;
-}
-
-.about-project_mission {
-  margin-top: 150px;
-}
-
-.about-project_mission-title {
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-
-.about-project_lining {
-  margin-top: 70px;
-  margin-bottom: 50px;
-}
-
-.about-project_lining-title {
-  margin-bottom: 20px;
-}
-
 ._title {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 42px;
-  color: #396857;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--primary-color);
 }
+
+
+
+.about-project-btn {
+    position: relative;
+
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+    padding: .3em 1em .3em 2em;
+
+    text-transform: uppercase;
+
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--primary-color);
+
+    border: 1px solid;
+    border-radius: 100px;
+}
+.about-project-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: .75em;
+    width: .75em;
+    transform: translateY(-50%);
+    aspect-ratio: 1 / 2;
+    background-image: url('/images/ArrowDown.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain;
+}
+
+
+
+#about-project {
+    scroll-margin-top: 120px;
+}
+.about-project img {
+    margin-bottom: 20px;
+}
+.about-project_mission {
+    margin-top: 150px;
+}
+.about-project_lining {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+
 
 .block_item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
 .block_row {
-  display: flex;
-  cursor: pointer;
-  border: 1px solid #396857;
-  border-radius: 30px;
-  padding-left: 15px;
-  margin-bottom: 20px;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    padding-left: 15px;
+    margin-bottom: 20px;
 }
-
 .block_title {
-  padding: 5px;
-  padding-left: 15px;
+    padding: 5px;
+    padding-left: 15px;
 }
-
 .block_text {
-  display: none;
-  padding: 10px 0px 0px 0px;
-  background-color: #EBF0EE;
-  border-radius: 30px;
-  padding: 20px;
+    display: none;
+    padding: 1em;
+    background-color: #ebf0ee;
+    border-radius: 1.5em;
+}
+.block_text p:not(:first-child) {
+    margin-top: .5em;
 }
 
-.block_text p:not(:first-child) {
-  margin-top: 10px;
-}
+
 
 .women-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  -webkit-clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
-          clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    -webkit-clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
+        clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
 }
 
-._ibg img {
-  width: 100%;
-  -webkit-clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
-          clip-path: polygon(40.92% 15.93%, 0% 15.93%, 0% 64.45%, 0% 100%, 100% 100%, 100% 82.23%, 40.92% 82.23%);
-  cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+.women-footer > img {
+    width: 100%;
+}
