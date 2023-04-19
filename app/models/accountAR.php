@@ -71,7 +71,7 @@ class Account extends basicAR{
 
         try{
             $stmt->execute();
-        } catch (PDOException){};
+        } catch (PDOException $e){};
     }
 
 
