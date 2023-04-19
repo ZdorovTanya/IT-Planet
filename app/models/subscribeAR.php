@@ -41,4 +41,22 @@ class Subscribe extends basicAR{
         return $stmt->rowCount() >= 1;
     }
 
+    static function getSubscribe($follower){
+        static::createConnect();
+
+        $stmt = static::$pdo->prepare("SELECT `author_id` FROM `subscriptions` WHERE `follower_id`=:follower");
+        $stmt->bindParam("follower", $follower);
+
+        $stmt->execute();
+        $res =[];
+
+        while($sub = $stmt->fetch())
+            $res[] = $sub["author_id"];
+        
+        return $res;
+    }
+
+
+    
+
 }

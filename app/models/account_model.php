@@ -103,6 +103,12 @@ class Account_model{
         return Subscribe::checkSubscribe($author_id, $follower_id);
     }
 
+    function getSubscribes($id = null){
+        $id = $id ?? $_SESSION["accId"];
+        require_once("app/models/subscribeAR.php");
+        return Subscribe::getSubscribe($id);
+    }
+
     function getId(){
         return $this->account->id;
     }

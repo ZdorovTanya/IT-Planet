@@ -100,25 +100,17 @@
                 </div>
 
                 <div class="subscriptions-box">
-                    <div class="subscriptions-item">
-                        <img src="/images/subscribeImg.svg" alt="фото подписок">
-                        <div class="subscriptions-name">Катя</div>
-                    </div>
-
-                    <div class="subscriptions-item">
-                        <img src="/images/subscribeImg.svg" alt="фото подписок">
-                        <div class="subscriptions-name">Таня</div>
-                    </div>
-
-                    <div class="subscriptions-item">
-                        <img src="/images/subscribeImg.svg" alt="фото подписок">
-                        <div class="subscriptions-name">Даша</div>
-                    </div>
-
-                    <div class="subscriptions-item">
-                        <img src="/images/subscribeImg.svg" alt="фото подписок">
-                        <div class="subscriptions-name">Света</div>
-                    </div>
+                <?
+                    $mySubs = $model->getSubscribes($model->getId());
+                    if (count($mySubs) > 4) $mySubs = array_slice($mySubs, 0, 4);
+                    
+                    foreach($mySubs as $subs){
+                    ?>
+                        <div class="subscriptions-item">
+                            <img src="/images/subscribeImg.svg" alt="фото подписок">
+                            <div class="subscriptions-name"><a href=<?="/account/".$subs?>><?= Account::findNameById($subs) ?></a></div>
+                        </div>
+                    <?}?>
                 </div>
 
                 <div class="subscribe-btn-box">
