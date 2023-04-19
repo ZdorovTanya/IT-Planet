@@ -4,6 +4,7 @@ class Router{
     static function start(){
         
         $controller = null;
+        $id = null;
 
         //если адрес некорректный - переводит на главную
         if (!isset($_REQUEST["controller"])){
@@ -22,10 +23,14 @@ class Router{
 
         //действие на страницей, есди ничего - вывод стр по умолчанию
         $action = $_REQUEST["action"] === "" ? null : $_REQUEST["action"];
+        if (is_numeric($action)){
+            $id = $action;
+            $action = "showId";
+        }
         
         //выполнение действия
         if (!is_null($controller) && is_null($action)) $controller->defaultPage();
-        elseif (!is_null($controller) && !is_null($action)) $controller->$action();
+        elseif (!is_null($controller) && !is_null($action)) $controller->$action($id);
         else {
             header("Location: /main/");
             exit();
