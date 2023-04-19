@@ -132,7 +132,15 @@ class Article extends basicAR{
 
     //геттеры
 
-    function getSubjects(){
+    function getArraySubjects(){
+        $res = [];
+        foreach($this->subject as $subj)
+            $res[] = $subj["name"];
+
+        return $res;
+    }
+
+    function getStringSubjects(){
         $res = "";
         foreach($this->subject as $subj)
             $res .= $subj["name"]." ";

@@ -67,10 +67,6 @@
                     <div class="history__box">                      
                         <div class="my-history">
                             <? echo $model->getAbout() ?>
-                            <!-- Длинный, очень длинный текст о моей жизни. Я такая классная вообще, вы бы знали.
-                            Но, на самом деле по ночам мне очень грустно. Я каждый день прихожу домой с Универа, беру свою кошку Люсю и иду смотреть турецкие сериалы взахлёб. 
-                            А это всё потому что у меня не получается найти друзей...
-                            Я просто хочу дом на Бали и ничего не делая попивать кокосовое молоко на пляже... -->
                         </div>
                     </div>
                 </div>
@@ -131,23 +127,19 @@
                             <div class="article-row-1">
                                 <div class="article-name"><?= $articles->getTitle()?></div>
                                 <div class="article-hashtag">
-                                    <?=$articles->getSubjects()?>
-                                    <!-- <div class="hashtag-item">
-                                        <div class="hashtag-name"> #Анорексия</div>
-                                    </div>
-                                    <div class="hashtag-item">
-                                        <div class="hashtag-name"> #Начало</div>
-                                    </div>
-                                    <div class="hashtag-item">
-                                        <div class="hashtag-name"> #Борьба</div>
-                                    </div> -->
+                                    <?
+                                        $subjs = $articles->getArraySubjects();
+                                        foreach($subjs as $article){
+                                        ?>
+                                        <div class="hashtag-item">
+                                            <div class="hashtag-name"><?=$article?></div>
+                                        </div>
+                                    <? } ?>
                                 </div>
                             </div>
                             <div class="article-row-2">
                                 <div class="article-content">
                                     <?= substr($articles->getText(), 0, 150)."..."?>
-                                    <!-- Я много раз начинала бороться в РПП, но всякий раз, когда видела привес на весах 
-                                    бросала это занятие и снова садилась на диету. -->
                                 </div>
                             </div>
                         </div>

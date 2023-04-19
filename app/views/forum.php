@@ -62,7 +62,7 @@
                                 <article class="card">
                                     <div class="card__wrapper _ortorecsia">
                                         <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                                        <div class="title-filter"><?= $article->getSubjects()?></div>
+                                        <div class="title-filter"><?= $article->getStringSubjects()?></div>
                                         <div class="main-title"><?= $article->getTitle()?></div>
                                         <div class="card-text">
                                             <?= $article->getText()?>
