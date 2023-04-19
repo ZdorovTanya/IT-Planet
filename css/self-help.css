@@ -1,120 +1,34 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
-  
-  *, *:before, *:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  :focus, :active {
-    outline: none;
-  }
-  
-  a:focus, a:active {
-    outline: none;
-  }
-  
-  html, body{
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  input, button, textarea{
-    font-family: inherit;
-  }
-  
-  input::-ms-clear{
-    display:none;
-  }
-  
-  button{
-    cursor: pointer;
-  }
-  button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
-  }
-  
-  a, a:visited{
-    text-decoration:none;
-  }
-  a:hover{
-    text-decoration: none;
-  }
-  
-  ul li{
-    list-style: none;
-  }
-  
-  img{
-    vertical-align: top;
-  }
-  
-  h1, h2,h3, h4, h5, h6{
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  /* ------------------------------------------------------------------------------------- */
-  
-  /*Убрать полосу прокрутки для всей страницы*/
-  ::-webkit-scrollbar {
-    width: 0;
-  } 
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body{
-    height: 100%;
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-  .wrapper{
-    min-height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  ._container{ 
-    max-width: 1366px;
-    margin: 0px auto;
-  }
+@import url("/css/_fonts.css");
+@import url("/css/_vars.css");
+@import url("/css/_reset.css");
+@import url("/css/_base.css");
+@import url("/css/_menu.css");
 
-  ._title {
+/*------------------------------------------------------------*/
+
+._title {
     margin: 30px;
     font-weight: 300;
     font-size: 32px;
     line-height: 42px;
-    color: #396857;
-
+    color: var(--primary-color);
 }
 ._text {
     font-weight: 300;
     font-size: 20px;
     line-height: 26px;
 
-    color: #000000;
+    color: #000;
     width: 818px;
     margin: 30px;
 }
 
 ._box{
-    background: #DAE2EB;
-    border: 2px solid #396857;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border: 2px solid var(--primary-color);
     width: 1198px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    background-color: #dae2eb;
 }
 
 .about-page{
@@ -134,24 +48,24 @@
 
     margin-top: 50px;
 }
- .video__row{
+.video__row{
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
  }
 
- .useful-sources-telegram{
+.useful-sources-telegram{
     margin-top: 50px;
  }
- .tg__row{
+.tg__row{
     margin: 20px;
  }
- .task {
-  margin-top: 50px;
+.task {
+    margin-top: 50px;
 }
 
 .taskHelp-row{
-  border: 2px solid #396857;
+  border: 2px solid var(--primary-color);
   border-radius: 30px;
 
   display: flex;
@@ -170,7 +84,7 @@
 ._task-title{
   font-size: 20px;
   line-height: 26px;
-  color: #396857;
+  color: var(--primary-color);
   margin-left: 50px;
   
 }
@@ -190,8 +104,8 @@
   font-size: 20px;
   line-height: 26px;
 
-  background-color: #ffffff;
-  border: 2px solid #396857;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
   border-radius: 30px;
   
   padding: 20px;
@@ -201,6 +115,6 @@
   margin-bottom: 20px;
 }
 
-p{
+p {
   text-indent: 10px;
 }

@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форум</title>
 
-
-    <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/forum.css">
 
-    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <div class="wrapper">
@@ -23,22 +18,32 @@
         ?>
 
         <div class="filters">
-            <form action="/forum/" method="post">
+            <form action="/forum/" method="post" style="display: flex; gap: 2rem;">
 
-                <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
-                <label for="anorexia">Анорексия</label>
+                <div>
+                    <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
+                    <label for="anorexia">Анорексия</label>
+                </div>
 
-                <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
-                <label for="bulimia">Булимия</label>
+                <div>
+                    <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
+                    <label for="bulimia">Булимия</label>
+                </div>
 
-                <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
-                <label for="orthorexia">Орторексия</label>
+                <div>
+                    <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
+                    <label for="orthorexia">Орторексия</label>
+                </div>
 
-                <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
-                <label for="overeating">Компульсивное переедание</label>
+                <div>
+                    <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
+                    <label for="overeating">Компульсивное переедание</label>
+                </div>
 
-                <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
-                <label for="other">Другое</label>
+                <div>
+                    <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
+                    <label for="other">Другое</label>
+                </div>
 
                 <button type="submit">Фильтровать</button>
             </form>
@@ -47,7 +52,7 @@
         </div>
 
         <section class="forum-articles">
-            <div class="container">
+            <div class="_container">
                 <div class="forum-articles__body">
 
                     <!-- карточка форума -->

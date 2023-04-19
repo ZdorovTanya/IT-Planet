@@ -7,14 +7,10 @@
 
     <title>eat.NORMAL</title>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/index.css">
     <!-- <link rel="stylesheet" href="/css/popup.css">-->
 
-    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
