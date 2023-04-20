@@ -267,26 +267,24 @@
                 <img src="/images/ArrowDown.svg" alt="" class="arrow">
             </div>
 
-            <div class="taskHelp-row">
-                <img src="/images/writeTask.svg" alt="напишите задание">
-                <div class="task-question _task-title">
-                    Задание 10: Опишите свой идеальный день без РПП.
-                </div>
-                <img src="/images/ArrowDown.svg" alt="" class="arrow">
+            <div class="task-block_text"> 
+                <p>
+                    Чаще всего РПП носит долгоиграющий характер, бывает так, что ты уже и не помнишь, какая у тебя была жизнь без него.
+                </p>
+                <p>
+                    Как проходит день у людей, чьи мысли не погружены в вечные размышления о еде, планировании рациона, 
+                    подсчете калорий и энергозатратах на тренировках?
+                </p>
+                <p>
+                    Напишите как Вы видете свою жизнь без РПП? Опишите распорядок своего идельного дня. Много ли там пуктов, связанных с едой?
+                </p>
+                
             </div>
 
             <div class="taskHelp-row">
                 <img src="/images/writeTask.svg" alt="напишите задание">
                 <div class="task-question _task-title">
-                    Задание 11: Перед кем Вам стыдно за свой внешний вид.
-                </div>
-                <img src="/images/ArrowDown.svg" alt="" class="arrow">
-            </div>
-
-            <div class="taskHelp-row">
-                <img src="/images/writeTask.svg" alt="напишите задание">
-                <div class="task-question _task-title">
-                    Задание 12: Ваши цели, которые не связаны с телом.
+                    Задание 10: Ваши цели, которые не связаны с телом.
                 </div>
                 <img src="/images/ArrowDown.svg" alt="" class="arrow">
             </div>
