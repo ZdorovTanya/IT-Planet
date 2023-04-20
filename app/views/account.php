@@ -146,7 +146,7 @@
                                 </div>
                                 <div class="article-row-2">
                                     <div class="article-content">
-                                        <?= substr($articles->getText(), 0, 150)."..."?>
+                                        <?= mb_substr($articles->getText(), 0, 150)."..."?>
                                     </div>
                                 </div>
                             </div>
