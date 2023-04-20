@@ -17,7 +17,7 @@
 
         <div class="filters">
             <div class="_container">
-                <form action="/forum/" method="post">
+                <form class="filters__form" action="/forum/" method="post">
                     <label>
                         Анорексия
                         <input type="checkbox" name="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
@@ -42,11 +42,11 @@
                         Другое
                         <input type="checkbox" name="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
                     </label>
-
+                    
                     <button type="submit">Фильтровать</button>
                 </form>
-
-                <?= isset($_SESSION["accId"]) ? '<a href="/forum/writeSubject">Написать статью</a>' : ''?>
+                
+                <?= isset($_SESSION["accId"]) ? '<a class="write-article" href="/forum/writeSubject">Написать статью</a>' : ''?>
             </div>
         </div>
 
