@@ -6,9 +6,71 @@
 
 /*------------------------------------------------------------*/
 
+.filters {
+    margin-top: 140px;
+}
+.filters form {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+.filters form > label {
+    padding: .65em 1.2em;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    color: var(--primary-color);
+
+    border-radius: 1em;
+    border: 2px solid;
+
+    user-select: none;
+    cursor: pointer;
+}
+.filters form > label:has(:checked) {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.filters form > label > input[type=checkbox] {
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.filters form button[type=submit] {
+    margin-left: 1rem;
+    padding: .65em 1.2em;
+    border-radius: 1em;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+    background-color: transparent;
+
+    transition: 100ms;
+}
+.filters form button[type=submit]:hover {
+    background-color: #d7e1dd;
+}
+
+
+
+
+
+
+
+
+
+
 /* карточка форума */
 .forum-articles {
-    margin: 100px 0;
+    margin: 60px 0 100px;
 }
 .forum-articles__body {
     display: grid;
@@ -30,18 +92,16 @@
 ._ortorecsia{
   background: linear-gradient(180deg, #396857 0%, #FFFFFF 100%);
 }
-
 ._anorecsia{
   background: linear-gradient(180deg, #683939 0%, #FFFFFF 100%), #FFFFFF;
 }
-
 ._boolimia{
   background: linear-gradient(180deg, #CEBE29 0%, #FFFFFF 100%), #FFFFFF;
 }
-
 ._compulsia{
   background: linear-gradient(180deg, #DAE2EB 0%, #FFFFFF 100%);
 }
+
 .state-picture {
     margin-bottom: 2rem;
 }
@@ -90,8 +150,6 @@
 }
 
 .card-text {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     color: #667085;
 
@@ -123,14 +181,7 @@
 }
 
 
-/* very beautiful and comfortable styles by andrew */
 
-.filters{
-  margin-left: 30%;
-  align-items: center;
-  align-content: center;
-  margin-top: 100px;
-}
 
 
 .subjform{
