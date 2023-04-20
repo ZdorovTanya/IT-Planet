@@ -11,7 +11,6 @@
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-
     <div class="popup" id="popup_registration">
         <div class="popup__body">
             <form class="popup__form form-popup" action="/registration/register" method="post">
