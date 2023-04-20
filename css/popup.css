@@ -13,13 +13,140 @@
 
     width: 100%;
     height: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     background-color: hsl(158 14% 73% / 0.8);
 }
+
+.popup__body {
+    min-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__form {
+    --border-thickness: 2px;
+
+    width: 100%;
+    max-width: 430px;
+
+    border: var(--border-thickness) solid var(--primary-color);
+    border-radius: 2.5rem;
+
+    overflow: hidden;
+}
+
+
+.form-popup__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+    background-color: white;
+}
+.entrance, .registration {
+    position: relative;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+.form-popup__header > .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--border-thickness);
+    background-color: var(--primary-color);
+}
+
+
+.form-popup__middle {
+    padding: 2rem;
+    background-image: linear-gradient(100deg, #ffffff 2%, #d7e1dd 98%);
+}
+.form-popup__middle > *:not(:last-child) {
+    margin-bottom: 1rem
+}
+.form-popup__input-row {
+    position: relative;
+}
+.form-popup__input-row::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    aspect-ratio: 1;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    pointer-events: none;
+}
+.form-popup__input-row:has(input[type=email])::after {
+    background-image: url('/images/headForPopup.svg');
+}
+.form-popup__input-row:has(input[type=password])::after {
+    background-image: url('/images/lockForPopup.svg');
+}
+.form-popup__input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    outline: 1px solid #d9d9d9;
+}
+.form-popup__input:focus {
+    outline: var(--border-thickness) solid var(--primary-color);
+}
+
+
+.form-popup__checkbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.forgot, .rememberMe {
+    font-size: .9rem;
+    color: var(--primary-color);
+}
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    cursor: pointer;
+}
+.rememberMe > input {
+    width: 1rem;
+    aspect-ratio: 1;
+    accent-color: var(--primary-color);
+    cursor: inherit;
+}
+
+
+.form-popup__submit-btn {
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+    transition: background-color 200ms;
+}
+.form-popup__submit-btn:hover {
+    background-color: var(--primary-color-hover-lighter);
+}
+.form-popup__submit-btn:active {
+    background-color: var(--primary-color-hover-darker);
+}
+
+
+
+
+
+
+
+
 
 /* .popup__area { ???
     position: absolute;
@@ -28,105 +155,6 @@
     top: 0;
     left: 0;
 } */
-
-.popup__body {
-    position: relative;
-    /* max-width: 427px;
-    max-height: 261px; */
-
-    border: 3px solid var(--primary-color);
-    border-radius: 2.5rem;
-    overflow: hidden;
-
-    color: black;
-}
-
-.popup__header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    gap: 1rem;
-    background-color: white;
-}
-
-.entrance, .registration {
-    font-size: .9rem;
-    color: var(--primary-color);
-}
-
-
-
-.popup__middle {
-  padding: 1rem;
-  background: linear-gradient(100deg, #fff 2%, #d7e1dd 98%);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.input__row {
-  background-color: #fff;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 340px;
-  height: 40px;
-  border: 1px solid #D9D9D9;
-  border-radius: 2px;
-}
-
-label img {
-  padding-right: 80px;
-}
-
-input[type=email], input[type=password] {
-  width: 65%;
-}
-
-.checkbox__row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.forgot, .rememberMe {
-    font-size: .9rem;
-    color: #396857;
-}
-
-.rememberMe > input {
-    accent-color: var(--primary-color);
-}
-
-.rememberMe {
-    display: flex;
-    gap: .5rem;
-}
-
-
-
-.popup__footer {
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: var(--primary-color);
-}
-.popup__footer button[type=submit] {
-    padding: 1rem;
-    width: 100%;
-
-    border-radius: 2.5rem;
-}
-
-
-
-
-
-
-
-
-
-
 /* .popup__middle__2 { ???
   height: 470px;
   display: flex;

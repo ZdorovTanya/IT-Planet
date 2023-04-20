@@ -12,42 +12,43 @@
 </head>
 <body>
     <!-- попап регистрации и входа -->
-    <div id="popup" class="popup">
+    <div class="popup" id="popup">
         <div class="popup__body">
-            
-            <div class="popup__header">
-                <a href="/login/" class="entrance">Вход</a>
-                <a href="/registration/" class="registration">Регистрация</a>
-            </div>
-            СДЕЛАТЬ
-            <form action="/login/login" method="post">
-                <div class="popup__middle">
-                        <div class="input__row">
-                            <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
-                            <input id="UserEmail" type="email" name="email" placeholder="Введите email">
-                        </div>
 
-                        <div class="input__row">
-                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
-                            <input id="UserPassword" type="password" name="password" placeholder="Введите пароль">
-                        </div>
-
-                        <div class="checkbox__row">
-                            <label class="rememberMe">
-                                <input id="save" type="checkbox" name="saveMe"> 
-                                Запомнить меня
-                            </label>
-                            <a class="forgot" href="#">Забыли пароль?</a>
-                        </div>
+            <form class="popup__form form-popup" action="/login/login" method="post">
+                
+                <div class="form-popup__header">
+                    <a href="/login/" class="entrance active">Вход</a>
+                    <a href="/registration/" class="registration">Регистрация</a>
                 </div>
 
-                <div class="popup__footer">
-                    <button type="submit">Войти</button>
+                <div class="form-popup__middle">
+                    
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="email" id="UserEmail" name="email" placeholder="Введите email">
+                    </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="password" id="UserPassword" name="password" placeholder="Введите пароль">
+                    </div>
+                    
+                    <div class="form-popup__checkbox-row">
+                        <label class="rememberMe">
+                            <input id="save" type="checkbox" name="saveMe"> 
+                            Запомнить меня
+                        </label>
+                        <a class="forgot" href="#">Забыли пароль?</a>
+                    </div>
+
                 </div>
+                    
+                <button class="form-popup__submit-btn" type="submit">Войти</button>
+
             </form>
 
         </div>
+        <!-- /popup_body -->
     </div>
+    <!-- /popup -->
 
 </body>
 </html>

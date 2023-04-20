@@ -1,4 +1,6 @@
 /* Здесь объявляются CSS-переменные с глобальной областью видимости */
 :root {
-    --primary-color: #396857;
+    --primary-color: hsl(158 29% 32%);
+    --primary-color-hover-darker: hsl(158 29% 27%);
+    --primary-color-hover-lighter: hsl(158 29% 37%);
 }

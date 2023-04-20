@@ -8,20 +8,17 @@
 
     <link rel="stylesheet" href="/css/popup.css">
 
-    <link rel="icon" href="/images/favicon.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
-    <div id="popup_registration" class="popup">
+    <div class="popup" id="popup_registration">
         <div class="popup__body">
-            <div class="popup__contetnt">
+            <div class="popup__content">
                 
-                <div class="popup__title">
+                <div class="popup__header">
                     <a href="/login/" class="entrance">Вход</a>
-                    <a href="/registration/" class="registration">Регистрация</a>
+                    <a href="/registration/" class="registration active">Регистрация</a>
                 </div>
 
                 <div class="popup__middle__2">
