@@ -8,7 +8,7 @@ class Main_controller extends Controller{
     //открывает страницу по умолчанию - index.html
     function defaultPage(){
         
-        $this->view->render("index.php", $this->model);
+        $this->view->render("main.php", $this->model);
 
     }
 

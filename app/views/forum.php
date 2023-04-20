@@ -74,7 +74,7 @@
                                         <div class="avatar-info">
                                             <img src="/images/Avatar (1).svg" alt="" class="foro">
                                             <div class="name-date-box">
-                                                <div class="author"><a href=<?="/account/".$article->getAuthorId()?>><?= $article->getAuthor()?></a></div>
+                                                <div class="author"><a href=<?= (!is_null($article->getAuthorId())) ? "/account/".$article->getAuthorId() : "/main/" ?> > <?= $article->getAuthor()?></a></div>
                                                 <div class="publication-date"><?= $article->getDate()?></div>
                                             </div>
                                         </div>
