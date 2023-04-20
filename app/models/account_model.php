@@ -37,8 +37,6 @@ class Account_model{
         $this->account = $acc;
         $_SESSION["accName"] = $this->getName();
         $_SESSION["accId"] = $this->getId();
-        
-        // setcookie("accountId", $this->getId(), (time() + 31100000), "/", "it-planet");  // срок действия - 1 year
 
         return true;
 
@@ -61,6 +59,7 @@ class Account_model{
     }
 
 
+    //ищет акк по id
     function getAccountById($accId){
         require_once("app/models/articleAR.php");
         $this->account = Account::findById($accId);
@@ -68,6 +67,7 @@ class Account_model{
     }
 
 
+    //обновление данных акк
     function updateAccount(){
 
         if (!empty($_POST["personFIO"])) $this->account->name = $_POST["personFIO"];
@@ -82,6 +82,7 @@ class Account_model{
     }
 
 
+    //поиск статей по акк (автору)
     function findArticleByAccount($accId){
 
         require_once("app/models/articleAR.php");
@@ -111,6 +112,8 @@ class Account_model{
         return Subscribe::getSubscribe($id);
     }
 
+
+    //геттеры
     function getId(){
         return $this->account->id;
     }

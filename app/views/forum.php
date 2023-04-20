@@ -56,11 +56,6 @@
 
                     <!-- карточка форума -->
                     <?
-                    // $model->findArticleById(1);
-                    // $model->findArticleById(2);
-                    // $count = count($model->getAll())+1;
-                        // for($i=1; $i<$count; $i++){
-
                         foreach ($model->findAll($_POST) as $article){
                             ?>
                                 <article class="card">
@@ -83,27 +78,6 @@
                             <?
                         }
                     ?>
-
-                   
-
-                    <!-- карточка форума -->
-                    <!-- <article class="card">
-                        <div class="card__wrapper _anorecsia">
-                            <img src="/images/forumImageEatSalat.svg" alt="девушка ест салат" class="title-picture">
-                            <div class="title-filter">Анорексия</div>
-                            <div class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo!</div>
-                            <div class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio placeat rerum. Adipisci recusandae et mollitia minima, repudiandae esse cumque totam id iste rerum sequi, ullam sunt, magnam labore commodi.
-                            </div>
-                            <div class="avatar-info">
-                                <img src="/images/Avatar (1).svg" alt="" class="foro">
-                                <div class="name-date-box">
-                                    <div class="author">Loren</div>
-                                    <div class="publication-date">2022-10-10</div>
-                                </div>
-                            </div>
-                        </div>
-                    </article> -->
 
                 </div>
             </div>
