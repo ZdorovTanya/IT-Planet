@@ -1,86 +1,11 @@
-@charset "UTF-8";
-body * {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    border: none; 
-}
+@import url("/css/_fonts.css");
+@import url("/css/_vars.css");
+@import url("/css/_reset.css");
+@import url("/css/_base.css");
+@import url("/css/_menu.css");
 
-body *, body *::before, body *::after {
-    box-sizing: border-box;
-}
+/*------------------------------------------------------------*/
 
-html, body {
-    height: 100%;
-}
-
-input, button, textarea {
-    font-family: inherit;
-}
-
-button, select {
-    cursor: pointer;
-}
-
-a  {
-    text-decoration: none;
-}
-
-ul, ol, li {
-    list-style: none;
-}
-
-img {
-    display: block; /* все картинки делать блоками! */
-    max-width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-/*----------------------------------------------------------------*/
-
-html {
-    scroll-behavior: smooth;
-}
-body {
-    font-family: "Roboto Mono", monospace;
-    height: 100%;
-}
-
-body::-webkit-scrollbar {
-    width: 8px;
-}
-body::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--primary-color);
-}
-
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-._container {
-    max-width: 1366px;
-    margin: 0 auto;
-}
-
-
-
-/* Здесь объявляются CSS-переменные с глобальной областью видимости */
-/* :root дублирует корневой элемент html, но специфичность выше */
-:root {
-    --primary-color: #396857;
-}
-
-
- 
 .content {
     padding: 200px 0;
 }
@@ -90,8 +15,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
 ._text {
-    font-weight: 200; /* 100 слишком тонкий */
+    font-weight: 200;
     font-size: 20px;
     line-height: 1.4;
 }

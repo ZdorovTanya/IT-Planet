@@ -1,8 +1,8 @@
 <!-- общая оболочка шапки меню -->
 <header id="header" class="header">
     <!-- ограничивающий контейнер -->
-    <div class="header_container _container">
-        <nav class="header_menu">
+    <div class="_container">
+        <nav>
             <ul class="menu_list">
                 <li class="menu_item"> 
                     <a href="/main/" class="menu_link">Главная</a>

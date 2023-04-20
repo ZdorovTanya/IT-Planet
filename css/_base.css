@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+}
+html {
+    scroll-behavior: smooth;
+
+    /* скроллбар для Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+/* Скроллбар страницы (webkit браузеры) */
+html::-webkit-scrollbar {
+    width: 8px;
+}
+/* Дорожка скроллбара страницы */
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/* Ползунок скроллбара страницы */
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    line-height: 1;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+._container {
+    max-width: 1366px;
+    margin: 0 auto;
+}
