@@ -23,24 +23,24 @@
 
                 <div class="form-popup__middle">
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserName" name="name" placeholder="Введите Ваше имя/ник">
+                        <input class="form-popup__input" type="text" id="UserName" name="name" placeholder="Введите имя/ник">
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserAge" name ="birth" placeholder="Дата Вашего рождения">
+                        <input class="form-popup__input" type="text" id="UserAge" name ="birth" placeholder="Дата рождения">
                     </div>
                     
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserSex" name="sex" placeholder="Укажите Ваш пол">
+                        <input class="form-popup__input" type="text" id="UserSex" name="sex" placeholder="Укажите Пол" maxlength="1">
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserTarget" name="goal" placeholder="Опишите Вашу цель">
+                        <input class="form-popup__input" type="text" id="UserTarget" name="goal" placeholder="Опишите цель">
                     </div>
                     
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserProblem" name="problem" placeholder="Опишите Вашу проблему">
+                        <input class="form-popup__input" type="text" id="UserProblem" name="problem" placeholder="Опишите проблему">
                     </div>
 
                     <div class="form-popup__input-row">
@@ -55,12 +55,10 @@
                         <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="checkpassword" placeholder="Подтвердите пароль">
                     </div>
 
-                    <div class="text">
-                        * Любую информацию, которую Вы посчитаете личной, можно будет скрыть в профиле.
-                    </div>
+                    <div class="asterisk-text ">* Любую информацию, которую Вы посчитаете личной, можно будет скрыть в профиле.</div>
                 </div>
 
-                <button class="form-popup__submit-btn" type="submit">Войти</button>
+                <button class="form-popup__submit-btn" type="submit">Зарегистрироваться</button>
             </form>
             <!-- /popup__form -->
         </div>
