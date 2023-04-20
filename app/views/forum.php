@@ -16,40 +16,40 @@
         <? include("app/views/menu.php"); ?>
 
         <div class="filters">
-            <form action="/forum/" method="post" style="display: flex; gap: 2rem;">
+            <div class="_container">
+                <form action="/forum/" method="post">
+                    <label>
+                        Анорексия
+                        <input type="checkbox" name="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
+                    </label>
 
-                <div>
-                    <label for="anorexia">Анорексия</label>
-                    <input type="checkbox" name="anorexia" id="anorexia" value="1" <?= isset($_POST["anorexia"]) ? "checked" : ""?> >
-                </div>
+                    <label>
+                        Булимия
+                        <input type="checkbox" name="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
+                    </label>
 
-                <div>
-                    <label for="bulimia">Булимия</label>
-                    <input type="checkbox" name="bulimia" id="bulimia" value="2" <?= isset($_POST["bulimia"]) ? "checked" : ""?> >
-                </div>
+                    <label>
+                        Орторексия
+                        <input type="checkbox" name="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
+                    </label>
 
-                <div>
-                    <label for="orthorexia">Орторексия</label>
-                    <input type="checkbox" name="orthorexia" id="orthorexia" value="3" <?= isset($_POST["orthorexia"]) ? "checked" : ""?> >
-                </div>
+                    <label>
+                        Компульсивное переедание
+                        <input type="checkbox" name="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
+                    </label>
 
-                <div>
-                    <label for="overeating">Компульсивное переедание</label>
-                    <input type="checkbox" name="overeating" id="overeating" value="4" <?= isset($_POST["overeating"]) ? "checked" : ""?> >
-                </div>
+                    <label>
+                        Другое
+                        <input type="checkbox" name="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
+                    </label>
 
-                <div>
-                    <label for="other">Другое</label>
-                    <input type="checkbox" name="other" id="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
-                </div>
+                    <button type="submit">Фильтровать</button>
+                </form>
 
-                <button type="submit">Фильтровать</button>
-            </form>
-
-            <?= isset($_SESSION["accId"]) ? '<a href="/forum/writeSubject">Написать статью</a>' : ''?>
+                <?= isset($_SESSION["accId"]) ? '<a href="/forum/writeSubject">Написать статью</a>' : ''?>
+            </div>
         </div>
 
-        
         <section class="forum-articles">
             <div class="_container">
                 <div class="forum-articles__body">
