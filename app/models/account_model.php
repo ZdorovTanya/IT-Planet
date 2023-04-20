@@ -62,7 +62,9 @@ class Account_model{
 
 
     function getAccountById($accId){
+        require_once("app/models/articleAR.php");
         $this->account = Account::findById($accId);
+        $this->articles = Article::getArticleByAccount($accId);
     }
 
 

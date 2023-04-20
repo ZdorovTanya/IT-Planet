@@ -44,7 +44,7 @@ class Account_controller extends Controller{
 
 
     function showId($id){
-        if ($_SESSION["accId"] == $id){
+        if (($_SESSION["accId"] ?? -1) == $id){
             $this->defaultPage();
             return;
         }

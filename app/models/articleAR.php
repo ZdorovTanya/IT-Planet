@@ -123,8 +123,8 @@ class Article extends basicAR{
         $stmt->execute();
 
         $objs = [];
-        for($i=0; $i<3; $i++)
-            $objs[] = static::ceateArticle($stmt->fetch() ?? null);
+        while($res = $stmt->fetch())
+            $objs[] = static::ceateArticle($res);
 
         return $objs;
     }

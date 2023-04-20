@@ -39,6 +39,7 @@
                         <div class="btn-box">
                             <div class="registration-btn">
                                 <?
+                                if (isset($_SESSION["accId"])){
                                     if ($model->getId() == $_SESSION["accId"]){?>
                                     <!-- свой акк. вывод кнопки редактирования  -->
                                         <a href="#popupChangeAccount"><img src="/images/btnChangeProfile.svg" alt=""></a>
@@ -59,8 +60,9 @@
                                                 <input pod type="hidden" name="subs" value="<?=$model->getId()?>">
                                                 <button><img src="/images/btnSubscribe.svg" alt=""></button>
                                             </form>
-                                        <?}?>
-                                    <?}?>
+                                        <?}
+                                    }
+                                }?>
                             </div>
 
                         </div>
@@ -119,87 +121,46 @@
                 <div class="title-box">
                     <div class="article-title _title">Мои статьи</div>
                 </div>
+                
+                <?
+                    if (!empty($model->articles)){
+                    ?>
 
-                <div class="article-box">
-                    <?
-                    if (!is_null($model->articles))
-                    foreach($model->articles as $articles){
-                        ?>
+                    <div class="article-box">
+                        <?
+                        foreach(array_slice($model->articles, 0, 3) as $articles){
+                            if (is_null($articles)) break;
+                            ?>
 
-                        <div class="article-item">
-                            <div class="article-row-1">
-                                <div class="article-name"><?= $articles->getTitle()?></div>
-                                <div class="article-hashtag">
-                                    <?
-                                        $subjs = $articles->getArraySubjects();
-                                        foreach($subjs as $article){
-                                        ?>
-                                        <div class="hashtag-item">
-                                            <div class="hashtag-name"><?=$article?></div>
-                                        </div>
-                                    <? } ?>
+                            <div class="article-item">
+                                <div class="article-row-1">
+                                    <div class="article-name"><?= $articles->getTitle()?></div>
+                                    <div class="article-hashtag">
+                                        <?
+                                            $subjs = $articles->getArraySubjects();
+                                            foreach($subjs as $article){
+                                            ?>
+                                            <div class="hashtag-item">
+                                                <div class="hashtag-name"><?=$article?></div>
+                                            </div>
+                                        <? } ?>
+                                    </div>
+                                </div>
+                                <div class="article-row-2">
+                                    <div class="article-content">
+                                        <?= substr($articles->getText(), 0, 150)."..."?>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="article-row-2">
-                                <div class="article-content">
-                                    <?= substr($articles->getText(), 0, 150)."..."?>
-                                </div>
-                            </div>
-                        </div>
-                    <?}?>
+                        <?}?>
 
-                    <!-- <div class="article-item">
-                        <div class="article-row-1">
-                            <div class="article-name">Первый поход к психологу</div>
-                            <div class="article-hashtag">
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Анорексия</div>
-                                </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Психолог</div>
-                                </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Рекавери</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="article-row-2">
-                            <div class="article-content">
-                                За первй сеанс с психологом я успела рассказать лишь половину всех своих способов истязательства
-                                над своим телом.
-                            </div>
-                        </div>
-                    </div> -->
+                    </div>
 
-                    <!-- <div class="article-item">
-                        <div class="article-row-1">
-                            <div class="article-name">Набор веса</div>
-                            <div class="article-hashtag">
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Анорексия</div>
-                                </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #Набор веса</div>
-                                </div>
-                                <div class="hashtag-item">
-                                    <div class="hashtag-name"> #ИМТ</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="article-row-2">
-                            <div class="article-content">
-                               В начале я не могла позволить себе набрать вес. Врач утверждал, что без этого
-                               я протяну не долго, но отражение в зеркале  мне было важнее.
-                            </div>
-                        </div>
-                    </div> -->
+                    <div class="article-btn-box">
+                        <div class="article-btn"><img src="/images/showAllArticle.svg" alt="показать все статьи"></div>
+                    </div>
 
-                </div>
-
-                <div class="article-btn-box">
-                    <div class="article-btn"><img src="/images/showAllArticle.svg" alt="показать все статьи"></div>
-                </div>
-
+                <?}?>
 
             </div>
         </div>
