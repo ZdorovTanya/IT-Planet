@@ -142,15 +142,10 @@
                                     </div>
                                     <div class="article-row-2">
                                         <div class="article-content">
-                                            <?= substr($articles->getText(), 0, 150)."..."?>
+                                            <?= mb_substr($articles->getText(), 0, 150)."..."?>
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< HEAD
-                                <div class="article-row-2">
-                                    <div class="article-content">
-                                        <?= mb_substr($articles->getText(), 0, 150)."..."?>
-=======
                             <?}?>
 
                         </div>
@@ -178,7 +173,6 @@
                                     <div class="text-row">
                                         <div class="test-title">Тест на самооценку</div>
                                         <div class="test-date">Пройден 09.04.2023</div>
->>>>>>> 4b6476647a68506c27c06d05daec8157ee7a0afb
                                     </div>
                                 </div>
                             </div>
