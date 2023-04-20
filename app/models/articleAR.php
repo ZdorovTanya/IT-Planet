@@ -14,7 +14,7 @@ class Article extends basicAR{
     public $author;
 
 
-    //конструктор ??пераметры??
+    //конструктор
     function __construct($subject = null, $title = null, $text = null){
         $this->subject = $subject;
         $this->title = $title;

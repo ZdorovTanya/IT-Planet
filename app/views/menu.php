@@ -20,7 +20,6 @@
                     <a href="/self-help/" class="menu_link">Самопомощь</a>
                 </li>
                 <li class="menu_item">
-                    <!-- <img src="/images/avtorisation.svg" alt=""> -->
 
                     <?
                         $name = $_SESSION["accName"] ?? null;

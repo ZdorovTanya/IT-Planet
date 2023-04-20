@@ -70,7 +70,7 @@
                             <div class="about-me">О себе:</div>
                                         
                             <div class="my-history">
-                                <?= $model->getAbout() ?? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ratione repellendus, recusandae assumenda iusto eum quaerat ipsum, unde similique, at aperiam saepe ullam molestias quam quas praesentium magni. Ea, minima." ?>
+                                <?= $model->getAbout() ?? ""?>
                             </div>
                         </div>
 
@@ -309,10 +309,6 @@
                             </div>
 
                         </div>
-
-                        
-
-
 
                     </div>
                 </div>
