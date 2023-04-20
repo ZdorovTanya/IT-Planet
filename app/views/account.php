@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="/css/account.css">
     <link rel="stylesheet" href="/css/popupChangeAccount.css">
-
-    <!-- <link rel="stylesheet" href="/css/popup.css"> -->
 
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 </head>
@@ -165,7 +163,6 @@
             </div>
         </div>
 
-        
         <div class="test-result">
             <div class="test-result__wrapper _container">
                 <div class="title-box">
@@ -244,11 +241,11 @@
             </div>
         </div>
 
-
     </div>
 
-    <div id="popupChangeAccount" class="popupChangeAccount">
-        <a href="#header" class="popupChangeAccount__area"></a>
+    <div class="popupChangeAccount" id="popupChangeAccount">
+        <a class="popupChangeAccount__area" href="#header"></a>
+
         <div class="popupChangeAccount__body">
             <div class="popupChangeAccount__contetnt">
                 
@@ -261,7 +258,7 @@
 
                             <div class="about-yourself__row1">
                                 
-                                <form method="POST" action="/account/change">
+                                <form action="/account/change" method="post">
 
                                     <div class="about-yourself__row2">
                                     
