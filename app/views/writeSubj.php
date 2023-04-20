@@ -19,31 +19,43 @@
             <div class="_container">
                 <div class="subjform__body">
                     <form action="/forum/saveSubj" method="post">
+                        <label>
+                            <input type="checkbox" name="subjects[]" id="subject1" value="1">
+                            Анорексия
+                        </label>
 
-                        <label for="subject1">Анорексия</label>
-                        <input type="checkbox" name="subjects[]" id="subject1" value="1">
+                        <label>
+                            <input type="checkbox" name="subjects[]" id="subject2" value="2">
+                            Булимия
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="subjects[]" id="subject3" value="3">
+                            Оторексия
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="subjects[]" id="subject4" value="4">
+                            Компульсивное переедание
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" name="subjects[]" id="subject5" value="5">
+                            Другое
+                        </label>
 
-                        <label for="subject2">Булимия</label>
-                        <input type="checkbox" name="subjects[]" id="subject2" value="2">
+                        <label class="text-fields">
+                            Название
+                            <input type="text" name="title" id="title">
+                        </label>
                         
-                        <label for="subject3">Оторексия</label>
-                        <input type="checkbox" name="subjects[]" id="subject3" value="3">
-                        
-                        <label for="subject4">Компульсивное переедание</label>
-                        <input type="checkbox" name="subjects[]" id="subject4" value="4">
-                        
-                        <label for="subject5">Другое</label>
-                        <input type="checkbox" name="subjects[]" id="subject5" value="5">
-
-
-                        <label for="title">Название</label>
-                        <input type="text" name="title" id="title">
-                        
-                        <label for="maintext">Текст</label>
-                        <input type="text" name="maintext" id="maintext">
+                        <label class="text-fields">
+                            Текст
+                            <textarea name="maintext" id="maintext"></textarea>
+                        </label>
+                        <!-- <input type="text" name="maintext" id="maintext"> -->
 
                         <button type="submit">Готово!</button>
-
                     </form>
                 </div>
             </div>
