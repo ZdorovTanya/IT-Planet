@@ -11,10 +11,10 @@
                     <a href="/forum/" class="menu_link">Форум</a>
                 </li>
                 <li class="menu_item">
-                    <a href="" class="menu_link">Тесты</a>
+                    <a href="/test/" class="menu_link">Тесты</a>
                 </li>
                 <li class="menu_item">
-                    <a href="" class="menu_link">Консультации</a>
+                    <a href="/consultation/" class="menu_link">Консультации</a>
                 </li>
                 <li class="menu_item">
                     <a href="/self-help/" class="menu_link">Самопомощь</a>
