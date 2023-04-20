@@ -9,12 +9,12 @@
 .filters {
     margin-top: 140px;
 }
-.filters form {
+.filters__form {
     display: flex;
     justify-content: end;
     gap: 1rem;
 }
-.filters form > label {
+.filters__form > label {
     padding: .65em 1.2em;
 
     display: flex;
@@ -29,11 +29,11 @@
     user-select: none;
     cursor: pointer;
 }
-.filters form > label:has(:checked) {
+.filters__form > label:has(:checked) {
     background-color: var(--primary-color);
     color: #fff;
 }
-.filters form > label > input[type=checkbox] {
+.filters__form > label > input[type=checkbox] {
     appearance: none;
     position: absolute;
     top: 0;
@@ -43,7 +43,7 @@
     height: 0;
     opacity: 0;
 }
-.filters form button[type=submit] {
+.filters__form button[type=submit] {
     margin-left: 1rem;
     padding: .65em 1.2em;
     border-radius: 1em;
@@ -55,11 +55,40 @@
 
     transition: 100ms;
 }
-.filters form button[type=submit]:hover {
+.filters__form button[type=submit]:hover {
     background-color: #d7e1dd;
 }
 
+.write-article {
+    position: relative;
+    padding: 1.2em 1.2em 1.2em 3.9em;
 
+    margin-top: 1.2em;
+
+    display: block;
+    width: fit-content;
+
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: #d7e1dd;
+    
+    border: 2px solid;
+    border-radius: 1.2em;
+}
+.write-article::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1.2em;
+    transform: translateY(-50%);
+
+    width: 1.5em;
+    aspect-ratio: 1;
+
+    background-image: url('/images/btn-write-article.svg');
+    background-position: center;
+    background-size: cover;
+}
 
 
 
@@ -184,26 +213,26 @@
 
 
 
-.subjform{
-  margin-top: 200px;
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(109.98deg, #FFFFFF 1.81%, #D7E1DD 98.82%);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+.subjform form > *:not(:last-child) {
+    margin-bottom: 1em;
 }
-
-.subjform label{
-  margin-left: 45%;
+.subjform form label{
+  /* margin-left: 45%; */
 }
-
-.subjform input{
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 30%;
+.subjform__body {
+    margin: 0 auto;
+    max-width: 400px;
+    margin-top: 200px;
+    background: linear-gradient(110deg, #fff 2%, #d7e1dd 98%);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
 }
-
-.subjform button{
-  display: flex;
-  margin-left: 47%;
+.subjform form input{
+    width: 100%;
+    padding: 1em;
+}
+.subjform form button[type=submit] {
+    padding: 1rem 3rem;
 }
