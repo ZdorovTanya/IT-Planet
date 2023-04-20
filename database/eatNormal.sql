@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 18 2023 г., 00:27
+-- Время создания: Апр 20 2023 г., 10:51
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -29,24 +29,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `id` int NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `birth` varchar(11) NOT NULL,
-  `sex` char(1) NOT NULL,
-  `goal` varchar(40) NOT NULL,
-  `problem` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `birth` varchar(11) COLLATE utf8mb4_general_ci NOT NULL,
+  `sex` char(1) COLLATE utf8mb4_general_ci NOT NULL,
+  `goal` varchar(40) COLLATE utf8mb4_general_ci NOT NULL,
+  `problem` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
   `height` int DEFAULT NULL,
   `weight` decimal(5,2) DEFAULT NULL,
-  `about` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `about` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `accounts`
 --
 
 INSERT INTO `accounts` (`id`, `name`, `birth`, `sex`, `goal`, `problem`, `email`, `password`, `height`, `weight`, `about`) VALUES
-(2, 'second', '03.01.2022', 'w', 'gain', 'im thin and tired', 'qqr@mail.ru', '202cb962ac59075b964b07152d234b70', 123, '120.33', 'Я люблю кушать пиццу. Особенно домашнюю на слоеном тесте))'),
+(2, 'second', '15.12.2022', 'w', 'gain', 'im thin and tired', 'qqr@mail.ru', '202cb962ac59075b964b07152d234b70', 123, '120.33', 'Я люблю кушать пиццу. Особенно домашнюю на слоеном тесте))'),
 (26, 'fir', '02.02.2023', 'w', 'gain', 'im pain', 'ygowvuyfrgvytwoveiuhtpbieuhrpciburybvg@mail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -57,11 +57,11 @@ INSERT INTO `accounts` (`id`, `name`, `birth`, `sex`, `goal`, `problem`, `email`
 
 CREATE TABLE `articles` (
   `id` int NOT NULL,
-  `title` varchar(120) NOT NULL,
-  `text` varchar(10000) NOT NULL,
+  `title` varchar(120) COLLATE utf8mb4_general_ci NOT NULL,
+  `text` varchar(10000) COLLATE utf8mb4_general_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `authorId` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `articles`
@@ -84,7 +84,7 @@ CREATE TABLE `articles_types_dis` (
   `id` int NOT NULL,
   `id_article` int NOT NULL,
   `id_type` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `articles_types_dis`
@@ -103,13 +103,32 @@ INSERT INTO `articles_types_dis` (`id`, `id_article`, `id_type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `subscriptions`
+--
+
+CREATE TABLE `subscriptions` (
+  `id` int NOT NULL,
+  `author_id` int NOT NULL,
+  `follower_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `subscriptions`
+--
+
+INSERT INTO `subscriptions` (`id`, `author_id`, `follower_id`) VALUES
+(26, 26, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `types_disorder`
 --
 
 CREATE TABLE `types_disorder` (
   `id` int NOT NULL,
-  `name` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `name` varchar(25) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `types_disorder`
@@ -148,6 +167,14 @@ ALTER TABLE `articles_types_dis`
   ADD KEY `id_type` (`id_type`);
 
 --
+-- Индексы таблицы `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `follower_id` (`follower_id`),
+  ADD KEY `author_id` (`author_id`);
+
+--
 -- Индексы таблицы `types_disorder`
 --
 ALTER TABLE `types_disorder`
@@ -176,6 +203,12 @@ ALTER TABLE `articles_types_dis`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT для таблицы `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
 -- AUTO_INCREMENT для таблицы `types_disorder`
 --
 ALTER TABLE `types_disorder`
@@ -197,6 +230,13 @@ ALTER TABLE `articles`
 ALTER TABLE `articles_types_dis`
   ADD CONSTRAINT `articles_types_dis_ibfk_1` FOREIGN KEY (`id_type`) REFERENCES `types_disorder` (`id`),
   ADD CONSTRAINT `articles_types_dis_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  ADD CONSTRAINT `subscriptions_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `subscriptions_ibfk_2` FOREIGN KEY (`follower_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
