@@ -49,6 +49,7 @@
             <?= isset($_SESSION["accId"]) ? '<a href="/forum/writeSubject">Написать статью</a>' : ''?>
         </div>
 
+        
         <section class="forum-articles">
             <div class="_container">
                 <div class="forum-articles__body">
