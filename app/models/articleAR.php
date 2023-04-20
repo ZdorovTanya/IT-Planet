@@ -10,8 +10,8 @@ class Article extends basicAR{
     public $title;
     public $text;
     public $date;
-    public $author;
     public $authorId;
+    public $author;
 
 
     //конструктор ??пераметры??
@@ -94,7 +94,7 @@ class Article extends basicAR{
     function save(){
         static::createConnect();
 
-        $stmt = static::$pdo->prepare("INSERT INTO `articles`(`id`, `title`, `text`, `date`, `author`) VALUES (NULL, :title, :text, CURRENT_TIMESTAMP, :authorId)");
+        $stmt = static::$pdo->prepare("INSERT INTO `articles`(`id`, `title`, `text`, `date`, `authorId`) VALUES (NULL, :title, :text, CURRENT_TIMESTAMP, :authorId)");
 
         $authorId = $_SESSION["accId"] ?? null;
         
