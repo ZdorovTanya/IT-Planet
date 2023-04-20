@@ -14,7 +14,6 @@
     <!-- попап регистрации и входа -->
     <div class="popup" id="popup">
         <div class="popup__body">
-
             <form class="popup__form form-popup" action="/login/login" method="post">
                 
                 <div class="form-popup__header">
@@ -23,12 +22,12 @@
                 </div>
 
                 <div class="form-popup__middle">
-                    
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="email" id="UserEmail" name="email" placeholder="Введите email">
+                        <input class="form-popup__input _with-icon" type="email" id="UserEmail" name="email" placeholder="Введите email">
                     </div>
+
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="password" id="UserPassword" name="password" placeholder="Введите пароль">
+                        <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="password" placeholder="Введите пароль">
                     </div>
                     
                     <div class="form-popup__checkbox-row">
@@ -38,15 +37,13 @@
                         </label>
                         <a class="forgot" href="#">Забыли пароль?</a>
                     </div>
-
                 </div>
                     
                 <button class="form-popup__submit-btn" type="submit">Войти</button>
-
             </form>
-
+            <!-- /popup__form -->
         </div>
-        <!-- /popup_body -->
+        <!-- /popup__body -->
     </div>
     <!-- /popup -->
 

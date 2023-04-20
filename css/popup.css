@@ -71,7 +71,13 @@
 .form-popup__input-row {
     position: relative;
 }
-.form-popup__input-row::after {
+.form-popup__input-row:has(._with-icon) .form-popup__input {
+    padding: 1rem 1rem 1rem 3.5rem;
+}
+.form-popup__input-row:not(:has(._with-icon)) .form-popup__input {
+    padding: 1rem;
+}
+.form-popup__input-row:has(._with-icon)::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -86,15 +92,14 @@
 
     pointer-events: none;
 }
-.form-popup__input-row:has(input[type=email])::after {
+.form-popup__input-row:has(input[type=email]._with-icon)::after {
     background-image: url('/images/headForPopup.svg');
 }
-.form-popup__input-row:has(input[type=password])::after {
+.form-popup__input-row:has(input[type=password]._with-icon)::after {
     background-image: url('/images/lockForPopup.svg');
 }
 .form-popup__input {
     width: 100%;
-    padding: 1rem 1rem 1rem 3.5rem;
     outline: 1px solid #d9d9d9;
 }
 .form-popup__input:focus {
@@ -126,6 +131,14 @@
 }
 
 
+.text {
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 1.5;
+    color: #74807c;
+}
+
+
 .form-popup__submit-btn {
     width: 100%;
     padding: 1rem;
@@ -139,36 +152,3 @@
 .form-popup__submit-btn:active {
     background-color: var(--primary-color-hover-darker);
 }
-
-
-
-
-
-
-
-
-
-/* .popup__area { ???
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
-/* .popup__middle__2 { ???
-  height: 470px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(109.98deg, #FFFFFF 1.81%, #D7E1DD 98.82%);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.text { ???
-  width: 340px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: #74807c;
-  padding: 5px;
-} */

@@ -14,75 +14,58 @@
 
     <div class="popup" id="popup_registration">
         <div class="popup__body">
-            <div class="popup__content">
+            <form class="popup__form form-popup" action="/registration/register" method="post">
                 
-                <div class="popup__header">
+                <div class="form-popup__header">
                     <a href="/login/" class="entrance">Вход</a>
                     <a href="/registration/" class="registration active">Регистрация</a>
                 </div>
 
-                <div class="popup__middle__2">
-                    <form method="post" action="/registration/register">
-                        <div class="input__row">
-                            <label for="UserName"></label>
-                            <input id="UserName" type="text" name="name" placeholder="Введите Ваше имя/ник">
-                        </div>
+                <div class="form-popup__middle">
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="text" id="UserName" name="name" placeholder="Введите Ваше имя/ник">
+                    </div>
 
-                        <div class="input__row">
-                            <label for="UserAge"></label>
-                            <input id="UserAge" type="text" name ="birth" placeholder="Дата Вашего рождения">
-                        </div>
-                        
-                        <div class="input__row">
-                            <label for="UserSex"></label>
-                                <input id="UserSex" type="text" name="sex" placeholder="Укажите Ваш пол">
-                        </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="text" id="UserAge" name ="birth" placeholder="Дата Вашего рождения">
+                    </div>
+                    
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="text" id="UserSex" name="sex" placeholder="Укажите Ваш пол">
+                    </div>
 
-                        <div class="input__row">
-                            <label for="UserTarget"></label>
-                                <input id="UserTarget" type="text" name="goal" placeholder="Опишите Вашу цель">
-                        </div>
-                      
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="text" id="UserTarget" name="goal" placeholder="Опишите Вашу цель">
+                    </div>
+                    
 
-                        <div class="input__row">
-                            <label for="UserProblem"></label>
-                            <input id="UserProblem" type="text" name="problem" placeholder="Опишите Вашу проблему">
-                        </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input" type="text" id="UserProblem" name="problem" placeholder="Опишите Вашу проблему">
+                    </div>
 
-                        <div class="input__row">
-                            <label for="UserEmail"><img src="/images/headForPopup.svg" alt=""></label>
-                            <input id="UserEmail" type="email" name="email" placeholder="Введите Email">
-                        </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input _with-icon" type="email" id="UserEmail" name="email" placeholder="Введите Email">
+                    </div>
 
-                        <div class="input__row">
-                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
-                            <input id="UserPassword" type="password" name="password" placeholder="Введите пароль">
-                        </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="password" placeholder="Введите пароль">
+                    </div>
 
-                        <div class="input__row">
-                            <label for="UserPassword"><img src="/images/lockForPopup.svg" alt=""></label>
-                            <input id="UserPassword" type="password" name="checkpassword" placeholder="Подтвердите пароль">
-                        </div>
- 
-                        <div class="text">
-                            * Любую информацию, которую вы посчитаете личной, Вы сможете скрыть в профиле.
-                        </div>
+                    <div class="form-popup__input-row">
+                        <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="checkpassword" placeholder="Подтвердите пароль">
+                    </div>
 
-                        <button type="submit">Войти</button>
-
-                    </form>
-
-
-
+                    <div class="text">
+                        * Любую информацию, которую Вы посчитаете личной, можно будет скрыть в профиле.
+                    </div>
                 </div>
 
-                
-                <div class="popup__footer">
-                </div>
-
-            </div>
-            
+                <button class="form-popup__submit-btn" type="submit">Войти</button>
+            </form>
+            <!-- /popup__form -->
         </div>
+        <!-- /popup__body -->
     </div>
+    <!-- /popup -->
 </body>
 </html>
