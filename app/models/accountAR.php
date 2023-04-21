@@ -55,6 +55,7 @@ class Account extends basicAR{
     }
 
 
+    //обновление существующего акк
     function update(){
 
         $this->createConnect();
