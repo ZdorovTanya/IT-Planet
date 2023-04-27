@@ -2,12 +2,17 @@
 
 require_once("app/core/basicAR.php");
 
+/**
+ * Summary of Subscribe
+ */
 class Subscribe extends basicAR{
     static private $table = "accounts";
     public $id;
     public $author_id;
     public $follower_id;
 
+
+    //добавляет подписку от follower на author
     static function addSubscribe($author, $follower){
         static::createConnect();
 
@@ -19,6 +24,7 @@ class Subscribe extends basicAR{
     }
 
 
+    //отменяте подписку от follower на author
     static function delSubscribe($author, $follower){
         static::createConnect();
 
@@ -29,6 +35,14 @@ class Subscribe extends basicAR{
         $stmt->execute();
     }
 
+
+    /**
+     * проверяет подписан ли follower на author
+     * возвращает true если подписка оформлена
+     * @param mixed $author
+     * @param mixed $follower
+     * @return bool
+     */
     static function checkSubscribe($author, $follower){
         static::createConnect();
 
@@ -41,6 +55,12 @@ class Subscribe extends basicAR{
         return $stmt->rowCount() >= 1;
     }
 
+
+    /**
+     * Возвращает всех, на кого подписан follower
+     * @param mixed $follower Тот, кто подписан
+     * @return array
+     */
     static function getSubscribe($follower){
         static::createConnect();
 
@@ -55,8 +75,5 @@ class Subscribe extends basicAR{
         
         return $res;
     }
-
-
-    
 
 }

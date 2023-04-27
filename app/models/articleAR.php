@@ -116,6 +116,7 @@ class Article extends basicAR{
     }
 
 
+    //поиск статей написанных авторос с указанным id
     static function getArticleByAccount($accId){
 
         $stmt = static::$pdo->prepare("SELECT * FROM `articles` WHERE `authorId`=:accid");
@@ -132,6 +133,7 @@ class Article extends basicAR{
 
     //геттеры
 
+    //темы в виде массива
     function getArraySubjects(){
         $res = [];
         foreach($this->subject as $subj)
@@ -140,6 +142,7 @@ class Article extends basicAR{
         return $res;
     }
 
+    //темы в виде строки
     function getStringSubjects(){
         $res = "";
         foreach($this->subject as $subj)
