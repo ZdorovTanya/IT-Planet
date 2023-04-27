@@ -13,7 +13,7 @@
 <body>
     <div class="popup" id="popup_registration">
         <div class="popup__body">
-            <form class="popup__form form-popup" action="/registration/register" method="post">
+            <form id="form" class="popup__form form-popup" action="/registration/register" method="post">
                 
                 <div class="form-popup__header">
                     <a href="/login/" class="entrance">Вход</a>
@@ -22,11 +22,11 @@
 
                 <div class="form-popup__middle">
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserName" name="name" placeholder="Введите имя/ник">
+                        <input class="form-popup__input _req" type="text" id="UserName" name="name" placeholder="Введите имя/ник*">
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input" type="text" id="UserAge" name ="birth" placeholder="Дата рождения">
+                        <input class="form-popup__input _req" type="text" id="UserAge" name ="birth" placeholder="Дата рождения*">
                     </div>
                     
                     <div class="form-popup__input-row">
@@ -43,15 +43,15 @@
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input _with-icon" type="email" id="UserEmail" name="email" placeholder="Введите Email">
+                        <input class="form-popup__input _with-icon _req _email" type="email" id="UserEmail" name="email" placeholder="Введите Email*">
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="password" placeholder="Введите пароль">
+                        <input class="form-popup__input _with-icon _req" type="password" id="UserPassword" name="password" placeholder="Введите пароль*">
                     </div>
 
                     <div class="form-popup__input-row">
-                        <input class="form-popup__input _with-icon" type="password" id="UserPassword" name="checkpassword" placeholder="Подтвердите пароль">
+                        <input class="form-popup__input _with-icon _req" type="password" id="UserPassword2" name="checkpassword" placeholder="Подтвердите пароль*">
                     </div>
 
                     <div class="asterisk-text ">* Любую информацию, которую Вы посчитаете личной, можно будет скрыть в профиле.</div>
@@ -64,5 +64,6 @@
         <!-- /popup__body -->
     </div>
     <!-- /popup -->
+    <script src="/js/avtorisationValidate.js"></script>
 </body>
 </html>

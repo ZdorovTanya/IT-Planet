@@ -109,7 +109,9 @@
 .form-popup__input:focus {
     outline: var(--border-thickness) solid var(--primary-color);
 }
-
+.form-popup__input._error{
+    box-shadow: 0 0 5px #830909;
+}
 
 .form-popup__checkbox-row {
     display: flex;
