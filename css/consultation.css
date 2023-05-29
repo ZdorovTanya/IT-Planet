@@ -1,0 +1,121 @@
+@import url("/css/_fonts.css");
+@import url("/css/_vars.css");
+@import url("/css/_reset.css");
+@import url("/css/_base.css");
+@import url("/css/_menu.css");
+
+/*------------------------------------------------------------*/
+._container-consultation {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+._box {
+    padding: 30px; 
+    margin-bottom: 50px;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    background-color: #dae2eb;
+}
+._title {
+    font-size: 32px; 
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+._text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000;
+}
+._text:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.about-page {
+    position: relative;
+    margin-top: 210px;
+}
+.about-page__text {
+    max-width: 1200px;
+}
+
+.consultation_btn img{
+    margin: auto;
+    margin-top: 20px;
+}
+
+.clinics {
+    border: 3px solid #396857;
+    border-radius: 20px;
+    background-color: #D7E1DD;
+}
+.clinics__header {
+    display: flex;
+    border-bottom: 3px solid #396857;
+    min-height: 63px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 32px;
+    color: #396857;
+    position: relative;
+}
+.line {
+    position: absolute;
+    left: 682.5px;
+    top: 0;
+    border-right: 3px solid #396857;
+    height: 63px;
+}
+.name {
+    width: 70%;
+    padding-left: 40px;
+}
+
+.place {
+    display: flex;
+    width: 30%;
+}
+
+.city{
+    padding-left: 40px;
+}
+.clinics__body {
+    display: flex;
+    border-bottom: 3px solid #396857;
+    max-height: 110px;
+    font-size: 24px;
+    line-height: 32px;
+    position: relative;
+}
+.line2 {
+    position: absolute;
+    left: 611.5px;
+    top: 0;
+    border-right: 3px solid #396857;
+    height: 89px;
+}
+.information {
+    margin: auto;
+    width: 70%;
+    padding-left: 40px;
+}
+.picture {
+}
+.btn__more {
+    min-height: 76px;
+    margin: auto;
+    background-color: #FFF9C7;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #396857;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 20px 20px;
+}
