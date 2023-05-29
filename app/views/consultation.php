@@ -47,6 +47,7 @@
                         самостоятельно и Вам или Вашему близкому необходимо оказние постоянной помощи, 
                         то в данном блоке Вы сможете обратиться к частным российским клиникам, которые направленны на лечение РПП.
                     </div>
+
                     <div class="clinics">
                         <div class="clinics__header">
                             <div class="name">Клиника расстройств пищевого поведения</div>
@@ -60,6 +61,44 @@
                             <div class="information _text">Основная деятельность клиники — лечение РПП — нервной анорексии и нервной булимии</div>
                             <div class="line2"></div>
                             <div class="picture"><img src="/images/clinics1.svg" alt=""></div>
+                        </div>
+                        <div class="btn__more">Узнать подробнее</div>
+                    </div>
+
+                    <div class="clinics">
+                        <div class="clinics__header">
+                            <div class="name">Клиника лечения зависимостей</div>
+                            <div class="line"></div>
+                            <div class="place"> 
+                                <img src="/images/whereClinics.svg" alt=""> 
+                                <div class="city">Москва</div>
+                            </div>
+                        </div>
+                        <div class="clinics__body">
+                            <div class="information _text">Основная деятельность клиники — лечение зависимостей, а также 
+                                психических расстройств
+                            </div>
+                            <div class="line2"></div>
+                            <div class="picture"><img src="/images/clinics2.svg" alt=""></div>
+                        </div>
+                        <div class="btn__more">Узнать подробнее</div>
+                    </div>
+
+                    <div class="clinics">
+                        <div class="clinics__header">
+                            <div class="name">Центр лечения и реабилитации от зависимостей</div>
+                            <div class="line"></div>
+                            <div class="place"> 
+                                <img src="/images/whereClinics.svg" alt=""> 
+                                <div class="city">Москва</div>
+                            </div>
+                        </div>
+                        <div class="clinics__body">
+                            <div class="information _text">Квалифицированная медицинская и психологическая помощь 
+                                зависимым и их близким по всей РФ
+                            </div>
+                            <div class="line2"></div>
+                            <div class="picture"><img src="/images/clinics3.svg" alt=""></div>
                         </div>
                         <div class="btn__more">Узнать подробнее</div>
                     </div>

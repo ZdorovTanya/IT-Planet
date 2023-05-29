@@ -52,6 +52,7 @@
     border: 3px solid #396857;
     border-radius: 20px;
     background-color: #D7E1DD;
+    margin-top: 30px;
 }
 .clinics__header {
     display: flex;
