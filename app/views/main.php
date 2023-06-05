@@ -23,7 +23,7 @@
         ?>
 
         <main class="content">
-
+ 
             <div class="_container">
                 <div class="content_row">
                     <!-- главная часть и кнопка -->

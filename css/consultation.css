@@ -7,7 +7,7 @@
 /*------------------------------------------------------------*/
 ._container-consultation {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 ._box {
     padding: 30px; 
@@ -37,7 +37,7 @@
 
 .about-page {
     position: relative;
-    margin-top: 210px;
+    margin-top: 190px;
 }
 .about-page__text {
     max-width: 1200px;
@@ -119,4 +119,76 @@
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 20px 20px;
+}
+.oms{
+    height: 128px;
+    background: #FFF9C7;
+    border: 2px solid #396857;
+    border-radius: 30px;
+    padding: 25px 30px 25px 30px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+
+/* ТАБЫ */
+
+.hidden{
+    display: none;
+}
+
+.list-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group-item{
+    background: #D7E1DD;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 23px;
+    color: #396857;
+    cursor: pointer;
+}
+
+.card{
+    background: #D7E1DD;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.specialist-card{
+    padding: 30px;
+}
+.specialist-title{
+    font-size: 23px;
+    color: #396857;
+    margin-bottom: 10px;
+}
+
+.main-text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-indent: 15px;
+}
+
+.description{
+    color:#396857;
+    margin-bottom: 15px;
+}
+
+.body-text{
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.warning{
+    font-weight: 200;
+    margin-bottom: 15px;
+    text-decoration: underline;
 }
