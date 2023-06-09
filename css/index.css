@@ -28,6 +28,11 @@
     color: var(--primary-color);
 }
 
+h3{
+    display: inline;
+    border-bottom: 4px solid var(--primary-color);
+    margin-bottom: 1em;
+}
 
 
 .about-project-btn {

@@ -29,27 +29,28 @@
                     <!-- главная часть и кнопка -->
                     <div class="eat_normal">
                         <img src="/images/eatNormaltitle.svg" alt="">
-                        <div class=" _text">
+                        <div class=" _text lang" key="eatNormal">
                             — это площадка, к которой вы можете обратиться, если вы столкнулись с проблемой расстройства пищевого поведения или только начинаете замечать за собой первые симптомы расстройства. 
                             Здесь вы можете найти необходимую информацию и получить помощь.
                         </div>
 
-                        <a class="about-project-btn" href="#about-project">О проекте</a>
+                        <a class="about-project-btn lang" key="about-project" href="#about-project">О проекте</a>
                     </div>
 
                     <!-- миссия и содержимое -->
                     <div class="about-project" id="about-project">
 
                         <div class="about-project_mission">
-                            <img src="/images/mission.svg" alt="">
-                            <div class="about-project_mission-text _text">
+                            <!-- <img src="/images/mission.svg" alt=""> -->
+                            <h3 class="_title lang" key="about-project-title"> НАША МИССИЯ</h3>
+                            <div class="about-project_mission-text _text lang" key="about-project-mission">
                                 Данный проект создан для помощи людям, которые хотят начать бороться с РПП, найти причины болезни и попытаться их преодолеть.
                             </div>
                         </div>
 
                         <div class="about-project_lining">
-                            <img src="/images/siteContent.svg" alt="">
-                            <div class="about-project_lining-text _text">
+                        <h3 class="_title lang" key="about-project-lining-title"> СОДЕРЖАНИЕ САЙТА</h3>
+                            <div class="about-project_lining-text _text lang" key="about-project-lining">
                                 Вы можете подробнее ознакомиться с каждым из разделов сайта.
                             </div>
                         </div>
@@ -61,10 +62,10 @@
                         <div class="block_item">
                             <div class="block_row">
                                 <img src="/images/ArrowDown.svg" alt="">
-                                <div class="block_title _title">Форум</div>
+                                <div class="block_title _title lang" key="forum-pages">Форум</div>
                             </div>
                             
-                            <div class="block_text _text"> 
+                            <div class="block_text _text lang" key="forum-text"> 
                                 <p>В разделе “Форум” Вы сможете познакомится с историями других пользователей по теме, которая интересует лично 
                                     Вас с помощью гибкой системы фильтров.
                                 </p>  
@@ -78,10 +79,10 @@
                         <div class="block_item">
                                 <div class="block_row">
                                     <img src="/images/ArrowDown.svg" alt="">
-                                    <div class="block_title _title">Тесты</div>
+                                    <div class="block_title _title lang" key="tests">Тесты</div>
                                 </div>
 
-                            <div class="block_text _text"> 
+                            <div class="block_text _text lang" key="tests-text"> 
                                 <p>
                                     Во вкладке тестов, Вы сможете пройти проверку на интересующую Вас тему. 
                                 </p>
@@ -99,10 +100,10 @@
                         <div class="block_item">
                                 <div class="block_row">
                                     <img src="/images/ArrowDown.svg" alt="">
-                                    <div class="block_title _title">Консультации</div>
+                                    <div class="block_title _title lang" key="doctors">Консультации</div>
                                 </div>
 
-                            <div class="block_text _text"> 
+                            <div class="block_text _text lang" key="doctors-text"> 
                                 <p>
                                     В случае если Вы решите обратиться к специалисту, раздел
                                     консультаций окажет содействие в подборе психотерапевта или группы помощи онлайн или офлайн. 
@@ -117,13 +118,12 @@
                         <div class="block_item">
                                 <div class="block_row">
                                     <img src="/images/ArrowDown.svg" alt="">
-                                    <div class="block_title _title">Самопомощь</div>
+                                    <div class="block_title _title lang" key="self-help">Самопомощь</div>
                                 </div>
                 
-                            <div class="block_text _text"> 
+                            <div class="block_text _text lang" key="self-help-text"> 
                                 <p>
-                                    Если Вы осознаете наличие проблемы, то Вы уже на половине пути 
-                                    к ее решению.
+                                    Если Вы осознаете наличие проблемы, то Вы уже на половине пути к ее решению.
                                 </p>
 
                                 <p>
@@ -140,10 +140,10 @@
                         <div class="block_item">
                                 <div class="block_row">
                                     <img src="/images/ArrowDown.svg" alt="">
-                                    <div class="block_title _title">Авторизация</div>
+                                    <div class="block_title _title lang" key="avtorisation">Авторизация</div>
                                 </div>
                         
-                            <div class="block_text _text"> 
+                            <div class="block_text _text lang" key="avtorisation-text"> 
                                 <p>
                                     Зарегистрировавшись на нашем сайте, Вы получите возможность делиться своими историями на форумах и оставлять комментарии под чужими постами, также в профиле будет доступно сохранение 
                                     результатов тестов, для отслеживания отслеживания прогресса, а также функция подписки на авторов и трекер самочувствия, в котором Вы можете отмечать 
@@ -177,5 +177,9 @@
     
     <!-- скрипт -->
     <script src="/js/contentSpoiler.js"></script>
+    <!-- <script src="/js/MainTranslate.js"></script> -->
+
+    <script src="/js/MenuTranslate.js"></script>
+
 </body>
 </html>

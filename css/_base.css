@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
+    transition: background-color .4s;
 }
+
 html {
     scroll-behavior: smooth;
 

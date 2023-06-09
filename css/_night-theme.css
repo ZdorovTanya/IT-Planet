@@ -1,0 +1,54 @@
+.dark-mode{
+    background-color: #a6a6a6;
+}
+
+body.dark-mode .night-theme-btn{
+    background-color: rgba(244, 243, 168, 0.5);
+}
+
+body.dark-mode ._moon{
+    opacity: 0;
+}
+
+body.dark-mode ._sun{
+    opacity: 1;
+}
+
+.night-theme-btn{
+    position: fixed;
+    top: 5px;
+    right: 1460px;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgba(180, 180, 180, 0.5);
+    transition: filter .4s, background-color .4s;
+    cursor: pointer;
+    z-index: 1000000;
+}
+
+.night-theme-btn:hover{
+    filter: brightness(50%);
+}
+
+.night-theme-btn:active{
+    filter: brightness(80%);
+}
+
+.night-theme-btn__icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -29px;
+    margin-top: -50%;
+    opacity: 0;
+    transition: opacity .4s;
+} 
+
+._moon{
+    opacity: 1;
+}

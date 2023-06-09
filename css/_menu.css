@@ -42,3 +42,8 @@
 .menu_link:has(img) > img {
     height: 26px;
 }
+
+.translate{
+    background: transparent;
+    /* fill: none; */
+}

@@ -18,6 +18,7 @@
         <? include("app/views/menu.php"); ?>
         
         <main>
+            
             <!--  -->
             <div class="about-yourself">
                 <div class="_container">
@@ -75,6 +76,12 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="my-self-health">
+                <div class="_container">
+                    <canvas id="myChart" class="__body"></canvas>
                 </div>
             </div>
             <!--  -->
@@ -318,5 +325,14 @@
         </div>
 
     </div>
+
+    <button class="night-theme-btn">
+        <img class="night-theme-btn__icon _sun" src="/images/sun-weather-sunny-svgrepo-com.svg" alt="">
+        <img class="night-theme-btn__icon _moon" src="/images/moon-weather-sunny-svgrepo-com.png" alt="">
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chart.js"></script>
+    <script src="/js/darkMode.js"></script>
 </body>
 </html>
