@@ -114,8 +114,14 @@
     border-radius: 30px;
 
     background-color: #fff;
+
+
+    text-indent: 3ch;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
 }
-.task-block_text > p {
+/* .task-block_text > p {
     text-indent: 3ch;
     font-size: 20px;
     font-weight: 300;
@@ -123,4 +129,4 @@
 }
 .task-block_text > p:not(:last-child) {
     margin-bottom: 0.5em;
-}
+} */

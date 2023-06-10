@@ -17,14 +17,14 @@
         
         <? include("app/views/menu.php"); ?>
 
-        <main>
+        <main> 
             <div class="_container-self-help">
 
                 <div class="about-page _box">
-                    <div class="_title">
+                    <div class="_title lang" key="self-help">
                         Самопомощь
                     </div>
-                    <div class="about-page__text _text">
+                    <div class="about-page__text _text lang" key="self-help-text">
                         Если Вы осознали наличие проблемы, то Вы уже на половине пути к ее решению. 
                         “Самопомощь” хранит в себе необходимый материал, для начала борьбы с заболеванием. 
                         Тут Вы можете найти ссылки на полезные источники и авторитетных психологов, ознакомиться с симптомами болезни и их возможными 
@@ -34,10 +34,10 @@
                 </div>
 
                 <div class="useful-sources _box">
-                    <div class="useful-sources__title _title">
+                    <div class="useful-sources__title _title lang" key="useful-sources-title">
                         Полезные источники
                     </div>
-                    <div class="useful-sources__text _text">
+                    <div class="useful-sources__text _text lang" key="useful-sources-text">
                         В этой части мы собрали видео и другие информационные ресуры, которые прямо или косвенно связаны с 
                         темой расстройств пищевого поведения и могут стать отправной точкой в борьбе с заболеванием.
                     </div>
@@ -50,11 +50,11 @@
                 </div>
 
                 <div class="useful-sources-telegram _box">
-                    <div class="_title">
+                    <div class="_title lang" key="useful-sources-tg">
                         Полезные телеграмм каналы
                     </div>
 
-                    <div class="_text">
+                    <div class="_text lang" key="useful-sources-tg-text">
                         В данном блоке мы собрали для Вас телеграм каналы, которые могут быть полезны в восстановлении от РПП.
                         В них Вы сможете найти не только информацию об РПП, но и интересные психологические каналы, которую также будут способствовать достижению устойчивого ментального здоровья.
                     </div>
@@ -67,33 +67,30 @@
                 </div>
 
                 <div class="task _box">
-                    <div class="_title">Задания</div>
+                    <div class="_title lang" key="tasks">Задания</div>
 
-                    <div class="_text">Данные практические задания направлены на визуализацию собственного состояния, помогают выделить для себя возможные причины заболевания и выстроить правильную стратегию по борьбе с ним.</div>
+                    <div class="_text lang" key="tasks-description">Данные практические задания направлены на визуализацию собственного состояния, помогают выделить для себя возможные причины заболевания и выстроить правильную стратегию по борьбе с ним.</div>
                     
                     <!-- Задание 1 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task1">
                         Задание 1: От чего вы устали в РПП?
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task1-text"> 
                         <p>
                             Положите перед собой блокнот и постарайтесь подробно прописать все негативные моменты, 
                             с которыми вы сталкиваетесь из-за РПП. 
                         </p>
                         <p>
                             Это может быть неприятие своего тела, буллинг со стороны знакомых и родных или проблемы, связанные с употреблением пищи.
-                        </p>
-                        <p>
                             Не романтизируйте РПП, чем больше плохого Вы вспомните, тем лучше.
-                        </p>
-                                            
+                        </p>                
                     </div>
 
                     <!-- Задание 2 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task2">
                         Задание 2: Вспомните какие отношения с едой были в Вашем детстве.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task2-text"> 
                         <p>
                             Какая еда у Вас была любимой в детсве, а какую вы на дух не переносили, есть ли у вас ритуалы, связанные с едой и семейные привычки?
                         </p>
@@ -110,10 +107,10 @@
                     </div>
 
                     <!-- Задание 3 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task3">
                         Задание 3: Напишите Ваши правила, ритуалы, запреты, связанные с едой.                
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task3-text"> 
                         <p>
                             Если у Вас есть продукты, которые Вы не позволяете себе есть, пропишите каждый из них. Любые ограничения в рационе 
                             провоцируют стресс и приводят к срывам на эти же продукты, также не стоит забывать, что исключая целую категорию продуктов 
@@ -130,10 +127,10 @@
                     </div>
                     
                     <!-- Задание 4 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task4">
                         Задание 4: Есть ли у Вас еда, на которую Вы “срываетесь”.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task4-text"> 
                         <p>
                             Чем дольше вы не позволяете себе те или иные категории продуктов, тем более желанными они становятся.
                         </p>
@@ -151,10 +148,10 @@
                     </div>
 
                     <!-- Задание 5 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task5">
                         Задание 5: Пропишите собственные причины для похудения.                
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task5-text"> 
                         <p>
                             Зачастую стремление быть стройнее исходит из вне. Это могут быть навязанные в СМИ стандарты красоты или общепринятые нормы, 
                             в которые нас с детсва учат вписываться.
@@ -169,10 +166,10 @@
                     </div>
                     
                     <!-- Задание 6 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task6">
                         Задание 6: Перед кем Вам стыдно за свой внешний вид.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task6-text"> 
                         <p>
                             Вините ли Вы себя за Ваше тело? Есть ли те, перед кем Вам стыдно за свой внешний вид? 
                             
@@ -189,10 +186,10 @@
                     </div>
 
                     <!-- Задание 7 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task7">
                         Задание 7: Какие плюсы и минусы были в Вашей погони за телом.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task7-text"> 
                         <p>
                             Столкнувшись с РПП может показаться, что мир начинает рушиться, что жизнь теряет краски и ничего хорошего в буднях не остается.
                             Но не стоит быть столь категоричными, да, расстройство пищевого поведения заметно меняет привычное расписание жизни, однако,
@@ -209,10 +206,10 @@
                     </div>
 
                     <!-- Задание 8 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task8">
                         Задание 8: Как выглядит Ваша болезнь? 
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task8-text"> 
                         <p>
                             Все мы хоть раз в жизни слышали о тесте "пятна Роршаха", где каждый видел то, что говорила ему подсознание.
                             
@@ -228,10 +225,10 @@
                     </div>
 
                     <!-- Задание 9 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task9">
                         Задание 9: Какой я вижу жизнь без РПП.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task9-text"> 
                         <p>
                             Чаще всего РПП носит долгоиграющий характер, бывает так, что ты уже и не помнишь, какая у тебя была жизнь без него.
                         </p>
@@ -246,10 +243,10 @@
                     </div>
 
                     <!-- Задание 10 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task10">
                         Задание 10: Ваши цели, которые не связаны с телом.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task10-text"> 
                         <p>
                             Люди, которые столкнулись с РПП смещают весь свой фокус внимания на еду, свое тело и самокопание.
                             Остальная жизнь проходит мимо, никакие другие проблемы больше не имеют значения, а жизненные цели, не связанные 
@@ -267,10 +264,10 @@
                     </div>
                     
                     <!-- Задание 11 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task11">
                         Задание 11: Ваши идеальные недостатки.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task11-text"> 
                         <p>
                             Многие склонны искать в себе и в своей фигуре несовершенства, но кто сказал, что их быть не должно?
                         </p>
@@ -289,10 +286,10 @@
                     </div>
                     
                     <!-- Задание 12 -->
-                    <div class="taskHelp-row">
+                    <div class="taskHelp-row lang" key="task12">
                         Задание 12: Круги удовлетворения.
                     </div>
-                    <div class="task-block_text"> 
+                    <div class="task-block_text lang" key="task12-text"> 
                         <p>
                             Суть задания заключается в том, чтобы визульно, с помощью диаграмм, отобразить свои потребности.
                         </p>
@@ -321,5 +318,6 @@
     </div>
 
     <script src="/js/taskSpoiler.js"></script>
+    <script src="/js/MenuTranslate.js"></script>
 </body>
 </html>

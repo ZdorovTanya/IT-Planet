@@ -44,7 +44,7 @@
                         <input id="other" type="checkbox" name="other" value="5" <?= isset($_POST["other"]) ? "checked" : ""?> >
                     </label>
                     
-                    <button class="lang" key="filtering" type="submit">Фильтровать</button>
+                    <button class="lang" key="filter" type="submit">Фильтровать</button>
                 </form>
                 
                 <?= isset($_SESSION["accId"]) ? '<a class="write-article" href="/forum/writeSubject">Написать статью</a>' : ''?>
