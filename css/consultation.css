@@ -107,6 +107,22 @@
 }
 .picture {
 }
+
+.submit-your-application{
+    min-height: 70px;
+    margin: auto;
+    background-color: #FFF9C7;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #396857;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid #396857;
+}
 .btn__more {
     min-height: 76px;
     margin: auto;

@@ -10,9 +10,9 @@
                 <li class="menu_item"> 
                     <a href="/forum/" class="menu_link lang" key="forum-pages">Форум</a>
                 </li>
-                <li class="menu_item">
+                <!-- <li class="menu_item">
                     <a href="/test/" class="menu_link lang" key="tests">Тесты</a>
-                </li>
+                </li> -->
                 <li class="menu_item">
                     <a href="/consultation/" class="menu_link lang" key="doctors">Консультации</a>
                 </li>
@@ -25,7 +25,7 @@
                         $name = $_SESSION["accName"] ?? null;
 
                         if (!isset($name))
-                            echo '<a href="/registration/" class="menu_link"><img src="/images/avtorisation.svg" alt="">Авторизация</a>';
+                            echo '<a href="/registration/" class="menu_link lang" key="avtorisation"><img src="/images/avtorisation.svg" alt="">Авторизация</a>';
                         else 
                             echo '<a href="/account/" class="menu_link"><img src="/images/avtorisation.svg" alt="">'.$name.'</a>';
                     ?>
